@@ -1,0 +1,1 @@
+const swiperProducts=document.querySelector('[data-swiper="products"]'),initSwiperProducts=()=>new window.Swiper(swiperProducts,{direction:"horizontal",loop:!1,speed:5e3,autoplay:{delay:5e3,stopOnLastSlide:!1,disableOnInteraction:!0},effect:"cube",cubeEffect:{slideShadows:!0,shadow:!0,shadowOffset:20,shadowScale:.94},grabCursor:!0});export{initSwiperProducts};
