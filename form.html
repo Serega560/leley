@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () {
+        (m[i].a = m[i].a || []).push(arguments)
+      };
+      m[i].l = 1 * new Date();
+      for (var j = 0; j < document.scripts.length; j++) {
+        if (document.scripts[j].src === r) {
+          return;
+        }
+      }
+      k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(96129877, "init", {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true
+    });
+  </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/96129877" style="position:absolute; left:-9999px;" alt=""/></div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
+  <meta charset="UTF-8">
+  <title> - Магазин лучшей косметики</title>
+  <meta name="viewport" content="width=evice-width,initial-scale=1">
+  <meta name="description"
+        content="Интернет-магазин по продаже косметикидля ухода тела и лица. Косметика, которая действительно работает.">
+  <meta name="keywords" content="крема, гели">
+  <link rel="preload" href="./fonts/Montserrat-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Montserrat-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Montserrat-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="icon" href="./favicon.svg" sizes="64x64" type="image/svg+xml">
+  <link rel="icon" href="https://leley.ru/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="data">
+  <div class="wrapper">
+    <h1>Отправка комментария на почту</h1>
+    <section class="data__section">
+      <form class="data__form form" action="#" method="post" id="form">
+        <fieldset class="form__fieldset">
+          <ul class="form__list">
+            <li class="form__item">
+              <label class="form__label" for="formName">
+                <span>Имя*:</span>
+                <input class="form__input _req" type="text" name="name" id="formName">
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__label" for="formEmail">
+                <span>Email*:</span>
+                <input class="form__input _req _email" type="email" name="email" id="formEmail">
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__label" for="formMessage">
+                <span>Сообщение:</span>
+                <textarea name="comment" id="formMessage" rows="10"></textarea>
+              </label>
+            </li>
+            <li class="form__item form__item--select">
+              <span>Возраст:</span>
+              <select>
+                <option value="до 18">до 18</option>
+                <option value="от 19 до 25">от 19 до 25</option>
+                <option value="от 26 до 49">от 26 до 49</option>
+                <option value="после 50">после 50</option>
+              </select>
+            </li>
+            <li class="form__item form__item-photo">
+              <span class="form__span">Прикрепить фото</span>
+              <label class="form__label form__label-photo" for="formPhoto">
+                <input class="form__photo-input" id="formPhoto" accept=".jpg, .png, .gif" type="file" name="image">
+                <div class="form__button-photo">Выбрать</div>
+                <div class="form__preview" id="formPreview"></div>
+              </label>
+            </li>
+            <li class="form__item">
+              <input class="form__input form__input--checkbox _req" type="checkbox" id="formAgreement" checked>
+              <label class=" form__label form__label--data" for="formAgreement">
+                <span class="form__text-data">Я даю свое согласие на обработку моих персональных данных в соответствии с
+                  <a href="#">Условиями*</a></span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="form__button" type="submit">Отправить</button>
+      </form>
+    </section>
+  </div>
+</main>
+<script src="./js/form.js"></script>
+</body>
+</html>
