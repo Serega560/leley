@@ -28,7 +28,6 @@
     top: -27px;
     left: 6px;
     background-size: 50px 50px;
-    //background-color: #7a7293;
     border-radius: 8px;
     background-position: 50% 50%;
   }
@@ -36,4 +35,10 @@
 
 a:hover {
   opacity: 0.8;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
 }
