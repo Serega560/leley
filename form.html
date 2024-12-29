@@ -45,6 +45,34 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<header class="header header--form">
+  <div class="header__wrapper">
+    <div class="header__body">
+      <a class="header__logo logo" href="index.html">
+        <picture>
+          <img src="images/logo.svg" width="113" height="61" alt="Логотип интернет магазина">
+        </picture>
+      </a>
+    </div>
+    <nav class="header__nav">
+      <div class="header__burger-body">
+        <input class="header__burger-checkbox" type="checkbox" id="burger-toggle">
+        <label class="header__burger" for="burger-toggle"></label>
+        <ul class="header__list header__list--form">
+          <li class="header__item header__item--current">
+            <a class="header__link" href="#catalog">Каталог</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#brand">О бренде</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="https://t.me/leley_feedback">Обратная связь</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
 <main class="data">
   <div class="wrapper">
     <h1>Отправка комментария на почту</h1>
@@ -79,7 +107,7 @@
                 <option value="после 50">после 50</option>
               </select>
             </li>
-            <li class="form__item form__item-photo">
+            <li class="form__item form__item--photo">
               <span class="form__span">Прикрепить фото</span>
               <label class="form__label form__label-photo" for="formPhoto">
                 <input class="form__photo-input" id="formPhoto" accept=".jpg, .png, .gif" type="file" name="image">
@@ -101,6 +129,72 @@
     </section>
   </div>
 </main>
+<footer class="footer" id="chat">
+  <div class="footer__wrapper wrapper">
+    <div class="footer__block">
+      <div class="footer__logo-socials">
+        <a class="footer__logo logo" href="index.html">
+          <picture>
+            <img src="images/logo.svg" width="113" height="61" alt="Логотип магазина">
+          </picture>
+        </a>
+        <p class="footer__text">© Все права защищены</p>
+      </div>
+      <div class="footer__nav">
+        <div>
+          <h3>Реквизиты</h3>
+          <ul>
+            <li>
+              <p>ИП КВАС ЕВГЕНИЙ СТАНИСЛАВОВИЧ</p>
+            </li>
+            <li>
+              <p>ОГРНИП 321470400044225</p>
+            </li>
+            <li>
+              <p>ИНН 470315802300</p>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>Обратная связь</h3>
+          <div class="footer__contacts-socials">
+            <ul class="footer__contacts contacts">
+              <li class="contacts__item contacts__item--phone">
+                <a href="https://t.me/leley_feedback"></a>
+              </li>
+            </ul>
+            <!--              <ul class="footer__socials socials">-->
+            <!--                <li class="socials__item">-->
+            <!--                  <a class="socials__link socials__link&#45;&#45;vk" href="https://vk.com/lena.prokosmetiku">-->
+            <!--                    <svg viewBox="0 0 20 20" width="20" height="20">-->
+            <!--                      <use href="images/icons/stack.svg#vk"></use>-->
+            <!--                    </svg>-->
+            <!--                    <span class="visually-hidden">Сайт Вконтакте</span>-->
+            <!--                  </a>-->
+            <!--                </li>-->
+            <!--                <li class="socials__item">-->
+            <!--                  <a class="socials__link socials__link&#45;&#45;pinterest" href="#">-->
+            <!--                    <svg viewBox="0 0 20 20" width="20" height="20">-->
+            <!--                      <use href="images/icons/stack.svg#pinterest"></use>-->
+            <!--                    </svg>-->
+            <!--                    <span class="visually-hidden">Сайт Пинтерест</span>-->
+            <!--                  </a>-->
+            <!--                </li>-->
+            <!--                <li class="socials__item">-->
+            <!--                  <a class="socials__link socials__link&#45;&#45;ok" href="#">-->
+            <!--                    <svg viewBox="0 0 20 20" width="20" height="20">-->
+            <!--                      <use href="images/icons/stack.svg#ok"></use>-->
+            <!--                    </svg>-->
+            <!--                    <span class="visually-hidden">Сайт Одноклассники</span>-->
+            <!--                  </a>-->
+            <!--                </li>-->
+            <!--              </ul>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 <script src="./js/form.js"></script>
 </body>
 </html>
