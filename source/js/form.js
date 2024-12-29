@@ -1,3 +1,5 @@
+'use strict';
+
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('form');
   form.addEventListener('submit', formSend);
@@ -11,20 +13,21 @@ document.addEventListener('DOMContentLoaded', function () {
     formData.append('image', formPhoto.files[0]);
 
     if (error === 0) {
+      formData.classList.add('_sending');
       let response = await fetch('sendmail.php', {
         method: 'POST',
-        body: formData,
+        body: formData
       });
 
       if (response.ok) {
-        form.classList.add('_sending');
         let result = await response.json();
         alert(result.message);
         formPreview.innerHTML ='';
         form.reset();
-      } else {
         form.classList.remove('_sending');
+      } else {
         alert("Ошибка");
+        form.classList.remove('_sending');
       }
     } else {
       alert("Заполните обязательные поля");

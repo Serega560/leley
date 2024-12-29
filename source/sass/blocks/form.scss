@@ -4,20 +4,22 @@
   font-size: 20px;
   display: flex;
   justify-content: center;
-  height: 140vh;
 
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: rgba(42, 43, 45, 0.78);
-      width: 100%;
-      height: 140vh;
-      transition: all 0.5s ease-in-out;
-      opacity: 0;
-      visibility: hidden;
-    }
+  @include dw() {
+    padding-top: 50px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(42, 43, 45, 0.78);
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+  }
 
   .data._sending:after {
     opacity: 1;
@@ -28,9 +30,13 @@
     font-size: 24px;
     margin: 0;
     margin-bottom: 30px;
+    font-weight: 400;
+    margin-left: 20px;
 
     @include tw {
       font-size: 36px;
+      font-weight: 600;
+      margin-left: 0;
     }
   }
 
@@ -55,11 +61,15 @@
   .form__list {
     display: flex;
     flex-direction: column;
-    row-gap: 40px;
+    row-gap: 20px;
     list-style: none;
     margin: 0;
     padding: 0;
     max-width: 570px;
+
+    @include dw() {
+      row-gap: 40px;
+    }
   }
 
   .form__label {
@@ -70,9 +80,13 @@
     input, textarea {
       max-width: 550px;
       border-radius: 5px;
-      padding: 15px 20px;
+      padding: 5px 10px;
       border: none;
       font-size: 17px;
+
+      @include dw() {
+        padding: 15px 20px;
+      }
 
       &:focus {
         box-shadow: 0 0 15px rgb(187, 243, 213);
@@ -105,10 +119,10 @@
     }
   }
 
-  .form__item-photo {
-    margin-bottom: 60px;
-  }
+  .form__item--photo {
+    margin-bottom: 120px;
 
+  }
 
   .form__label-photo {
     position: relative;
@@ -126,6 +140,24 @@
       font-size: 0;
       cursor: pointer;
       padding: 0;
+    }
+  }
+
+  .form__label--data {
+    margin-bottom: 20px;
+
+    @include dw() {
+      margin-bottom: 30px;
+    }
+
+    .form__text-data {
+      line-height: 22px;
+      font-size: 14px;
+
+      @include dw() {
+        font-size: 24px;
+        line-height: 36px;
+      }
     }
   }
 
@@ -147,8 +179,13 @@
   .form__preview {
     display: inline-flex;
     max-width: 100px;
-    padding: 10px 0 0 0;
-    border-radius: 4px;
+    padding: 15px 0 0 0;
+    max-height: 100px;
+    margin-bottom: 120px;
+
+    .form__image {
+      width: 100%;
+    }
   }
 
   .form__label--data {
@@ -209,10 +246,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 20px;
+    padding: 10px 10px;
     cursor: pointer;
     color: #fff;
-    font-size: 20px;
+    font-size: 16px;
     transition: background-color 0.4s;
     font-weight: 600;
     text-transform: uppercase;
@@ -221,6 +258,11 @@
     position: relative;
     max-width: 570px;
     width: 100%;
+
+    @include dw() {
+      padding: 20px 20px;
+      font-size: 20px;
+    }
 
     &:hover {
       background-color: #207a70;
@@ -244,7 +286,7 @@
   }
 
   .form__image {
-border-radius: 20px;
+    border-radius: 20px;
   }
 }
 

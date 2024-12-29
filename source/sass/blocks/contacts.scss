@@ -17,7 +17,7 @@
   }
 }
 
-.contacts__item {
+.contacts__item--phone {
   a::before {
     position: absolute;
     content: "";
@@ -28,6 +28,22 @@
     top: -27px;
     left: 6px;
     background-size: 50px 50px;
+    border-radius: 8px;
+    background-position: 50% 50%;
+  }
+}
+
+.contacts__item--email {
+  a::before {
+    position: absolute;
+    content: "";
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    background-image: url("../../images/svg/email.svg");
+    top: -17px;
+    left: 18px;
+    background-size: 35px 35px;
     border-radius: 8px;
     background-position: 50% 50%;
   }

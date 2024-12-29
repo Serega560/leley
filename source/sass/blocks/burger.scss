@@ -116,6 +116,7 @@
   z-index: 2;
   height: 80vh;
 
+
   @media (min-width: 768px) {
     top: 89px;
     height: auto;
@@ -130,6 +131,10 @@
     transform: translateX(0);
     padding: 17px 0;
     justify-content: center;
+  }
+
+  &--form {
+    background-color: #f2ecff;
   }
 }
 

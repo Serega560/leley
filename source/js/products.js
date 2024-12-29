@@ -7,12 +7,12 @@ const initSwiperProducts = () => new window.Swiper(swiperProducts, {
 
   // Параметры
   direction: 'horizontal',
-  loop: false,
+  loop: true,
   // centeredSlides: true,
   // slidesPerView: '1',
   // initialSlide: 2.4,
   // spaceBetween: 15,
-  speed: 5000,
+  speed: 3500,
 
   // navigation: {
   //   nextEl: swiperButtonNext,
@@ -33,9 +33,9 @@ const initSwiperProducts = () => new window.Swiper(swiperProducts, {
   // },
 
   autoplay: {
-    delay: 5000,
+    delay: 3500,
     stopOnLastSlide: false,
-    disableOnInteraction: true,
+    disableOnInteraction: false,
   },
 
   // effect: 'coverflow',
