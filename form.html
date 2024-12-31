@@ -77,19 +77,22 @@
   <div class="wrapper">
     <h1>Отправка комментария на почту</h1>
     <section class="data__section">
-      <form class="data__form form" action="#" method="post" id="form">
+      <form class="data__form form" id="form" action="https://api.web3forms.com/submit" method="POST">
+
+        <input type="hidden" name="access_key" value="1420997d-399e-44bd-8048-5483b186d8db">
+
         <fieldset class="form__fieldset">
           <ul class="form__list">
             <li class="form__item">
               <label class="form__label" for="formName">
                 <span>Имя*:</span>
-                <input class="form__input _req" type="text" name="name" id="formName">
+                <input class="form__input _req" type="text" name="name" id="formName" autocomplete="off">
               </label>
             </li>
             <li class="form__item">
               <label class="form__label" for="formEmail">
                 <span>Email*:</span>
-                <input class="form__input _req _email" type="email" name="email" id="formEmail">
+                <input class="form__input _req _email" type="email" name="email" id="formEmail" autocomplete="off">
               </label>
             </li>
             <li class="form__item">
@@ -124,7 +127,7 @@
             </li>
           </ul>
         </fieldset>
-        <button class="form__button" type="submit">Отправить</button>
+        <input class="form__button" type="submit">
       </form>
     </section>
   </div>
