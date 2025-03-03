@@ -21,9 +21,9 @@
     visibility: hidden;
   }
 
-  .data._sending:after {
-    opacity: 1;
-    visibility: visible;
+  &._sending {
+    opacity: 0.4;
+    pointer-events: none;
   }
 
   h1 {

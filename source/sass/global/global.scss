@@ -14,7 +14,7 @@ a, body {
 }
 
 body {
-  font-family: "Montserrat", "Arial", sans-serif;
+  font-family: "Montserrat", 'Arial', sans-serif;
   font-weight: 400;
   font-size: 16px;
   list-style-type: none;
@@ -38,4 +38,20 @@ a {
   &:visited {
     color: inherit;
   }
+}
+
+h1 {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+}
+
+h2 {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+}
+
+h3 {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+}
+
+p {
+  font-family: 'Montserrat', 'Arial', sans-serif;
 }

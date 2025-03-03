@@ -190,7 +190,7 @@
   }
 
   &--mint {
-    background-color: #daf5e3;
+    background-color: #dff1e5;
 
     .hero__features {
 
@@ -237,6 +237,26 @@
       li {
         &::before {
           background-color: #153691;
+        }
+      }
+    }
+
+    @include tw() {
+      background-image: linear-gradient(to bottom, #E5E6E8 700px, #ffffff 700px);
+    }
+
+    @include dw() {
+      background-image: none;
+    }
+  }
+
+  &--green {
+    background-color: #d3e8cf;
+
+    .hero__features {
+      li {
+        &::before {
+          background-color: #396913;
         }
       }
     }
