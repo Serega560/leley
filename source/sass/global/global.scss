@@ -7,16 +7,22 @@
   scroll-behavior: smooth;
 }
 
-a, body {
-  color: #1f1f1f;
+a,
+body,
+p,
+ul,
+ol,
+dl,
+dt,
+dd {
   padding: 0;
   margin: 0;
 }
 
 body {
-  font-family: "Montserrat", 'Arial', sans-serif;
+  font-family: 'Cormorant Garamond', 'Times New Roman', Georgia,'sans-serif';
   font-weight: 400;
-  font-size: 16px;
+  font-size: 20px;
   list-style-type: none;
   -webkit-user-select: none;
   user-select: none;
@@ -33,6 +39,7 @@ img {
 }
 
 a {
+  color: #1f1f1f;
   text-decoration: none;
 
   &:visited {
@@ -41,17 +48,17 @@ a {
 }
 
 h1 {
-  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-family: 'Cormorant Garamond', 'Times New Roman', Georgia,'sans-serif'
 }
 
 h2 {
-  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-family: 'Cormorant Garamond', 'Times New Roman', Georgia,'sans-serif'
 }
 
 h3 {
-  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-family: 'Cormorant Garamond', 'Times New Roman', Georgia,'sans-serif'
 }
 
 p {
-  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-family: 'Cormorant Garamond', 'Times New Roman', Georgia,'sans-serif'
 }

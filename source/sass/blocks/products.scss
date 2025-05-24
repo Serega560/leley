@@ -53,11 +53,11 @@
     }
 
     .products__doc {
-      font-size: 16px;
+      font-size: 20px;
       margin-left: 20px;
 
       @include tw {
-        font-size: 22px;
+        font-size: 26px;
       }
     }
   }
@@ -67,9 +67,6 @@
     font-size: 16px;
     grid-column: 1 / 2;
     grid-row: 3 / 4;
-    padding: 10px 20px;
-    background-color: #f2ecff;
-    border-radius: 10px;
     margin-bottom: 30px;
 
 

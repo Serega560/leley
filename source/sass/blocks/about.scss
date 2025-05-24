@@ -24,7 +24,7 @@ p {
     font-size: 1rem;
 
     @include dw() {
-      font-size: 1.5rem;
+      font-size: 1.5em;
     }
   }
 
@@ -34,7 +34,7 @@ p {
     margin-bottom: 15px;
 
     @include dw() {
-      font-size: 32px;
+      font-size: 1.5em;
       font-weight: 500;
       margin-bottom: 30px;
     }
@@ -76,7 +76,7 @@ p {
     font-size: 1rem;
 
     @include dw() {
-      font-size: 1.5rem;
+      font-size: 1.5em;
     }
   }
 
@@ -96,6 +96,10 @@ p {
   font-weight: 500;
   padding-top: 10px;
 
+  @include dw() {
+    font-size: 1.5em;
+  }
+
   &:after,
   &:before{
     position: absolute;
@@ -106,11 +110,12 @@ p {
     width: 100%;
     background-color: #7fe0ee;
   }
+
   &:before {
     top: 100px;
 
     @include dw() {
-      top: 115px;
+      top: 136px;
     }
   }
 }

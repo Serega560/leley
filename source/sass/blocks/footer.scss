@@ -14,7 +14,6 @@
 }
 
 .footer__wrapper {
-  padding: 20px 20px 30px;
   max-width: 1440px;
   margin: 0 auto;
 
@@ -85,7 +84,7 @@
     display: block;
     color: #333;
     margin-bottom: 50px;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 20px;
     text-align: left;
   }
@@ -130,11 +129,16 @@
 }
 
 .footer__wrapper h3 {
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 20px;
   color: #7859cf;
   margin: 0 0 12px;
+
+  @include tw {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
 }
 
 .footer__wrapper a:hover {
@@ -156,6 +160,10 @@
   font-weight: 500;
   line-height: 16px;
   font-size: 12px;
+
+  @include dw() {
+    font-size: 14px;
+  }
 }
 
 .footer__nav-list li:not(:last-child) {
