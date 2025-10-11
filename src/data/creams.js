@@ -9,8 +9,8 @@ export const creams = [
         review: "325 отзывов",
         imgFile: "lifting.png",
         imgFileMb: "lifting_mb.png",
-        rightBgFile: "lifting_bg1",
-        leftBgFile: "lifting_bg2",
+        rightBgFile: "lifting_bg1.png",
+        leftBgFile: "lifting_bg2.png",
         gallery: [
             {
                 fallback: new URL('../assets/img/lifting.png', import.meta.url).href,
@@ -667,8 +667,8 @@ export const creams = [
         review: "325 отзывов",
         imgFile: "matTonic.png",
         imgFileMb: "matTonic_mb.png",
-        rightBgFile:"matTonic_bg1",
-        leftBgFile:"matTonic_bg2",
+        rightBgFile:"matTonic_bg1.png",
+        leftBgFile:"matTonic_bg2.png",
         gallery: [
             {
                 fallback: new URL('../assets/img/matTonic.png', import.meta.url).href,

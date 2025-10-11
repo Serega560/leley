@@ -1,8 +1,8 @@
 <script setup>
-import {ref, computed, onMounted, onBeforeUnmount, watch} from 'vue'
-import {useRoute, useRouter} from 'vue-router'
+import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 
-import {creams} from '../data/creams.js'
+import { creams } from '../data/creams.js'
 import Stars from "@/assets/icons/stars.svg";
 import Next from "@/assets/icons/next.svg";
 import Prev from "@/assets/icons/prev.svg";
@@ -10,34 +10,41 @@ import Ozon from "@/assets/icons/ozon.svg";
 import Product from "@/views/Product.vue";
 import RatingReviews from "@/views/RatingReviews.vue";
 
+// Route & Router
 const route = useRoute()
 const router = useRouter()
 
+// Cream по ID
 const creamId = computed(() => Number(route.params.id))
 const cream = computed(() => creams.find(c => c.id === creamId.value) || {})
 
+// Состояния
 const expandedCompound = ref(false)
 const isMobile = ref(false)
-const zoomed = ref(false) // для модального увеличения
+const zoomed = ref(false)
 
-const images = computed(() => {
-  const c = cream.value || {};
-  return c.gallery || [];
-});
-
-
-// Активная картинка и окно миниатюр
+// Галерея
 const activeIndex = ref(0)
 const thumbStartIndex = ref(0)
 const maxThumbs = ref(3)
+const images = computed(() => cream.value.gallery || [])
+const current = computed(() => images.value[activeIndex.value] || {})
+const visibleThumbs = computed(() => images.value.slice(thumbStartIndex.value, thumbStartIndex.value + maxThumbs.value))
 
+// Подготавливаем пути к картинкам в скрипте
+const leftBg = computed(() => cream.value.leftBgFile
+    ? new URL(`../assets/img/${cream.value.leftBgFile}`, import.meta.url).href
+    : '')
+
+const rightBg = computed(() => cream.value.rightBgFile
+    ? new URL(`../assets/img/${cream.value.rightBgFile}`, import.meta.url).href
+    : '')
+
+// Проверка мобильного экрана
 function checkMobile() {
   isMobile.value = window.innerWidth <= 767
-  if (isMobile.value && images.value.length > 1) {
-    activeIndex.value = 1 // на мобилке показываем вторую картинку
-  } else {
-    activeIndex.value = 0
-  }
+  if (isMobile.value && images.value.length > 1) activeIndex.value = 1
+  else activeIndex.value = 0
   if (!isMobile.value) expandedCompound.value = false
 }
 
@@ -49,6 +56,7 @@ onBeforeUnmount(() => {
   window.removeEventListener('resize', checkMobile)
 })
 
+// Состав
 function toggleCompound() {
   expandedCompound.value = !expandedCompound.value
 }
@@ -60,40 +68,21 @@ function getTruncatedCompound(text, limit = 70) {
   return text.slice(0, limit) + '...'
 }
 
-// миниатюры
-const current = computed(() => images.value[activeIndex.value] || {})
-const visibleThumbs = computed(() =>
-    images.value.slice(thumbStartIndex.value, thumbStartIndex.value + maxThumbs.value)
-)
-
+// Выбор активной картинки
 function setActive(index) {
   if (!images.value || images.value.length === 0) return
   if (index < 0 || index >= images.value.length) return
   activeIndex.value = index
 }
 
-
-// свайпы
+// Свайпы
 const touchStartX = ref(0)
 const touchEndX = ref(0)
 
-function onTouchStart(e) {
-  touchStartX.value = e.changedTouches[0].clientX || 0
-}
-
-function onTouchEnd(e) {
-  touchEndX.value = e.changedTouches[0].clientX || 0;
-  handleSwipe()
-}
-
-function onMouseDown(e) {
-  touchStartX.value = e.clientX || 0
-}
-
-function onMouseUp(e) {
-  touchEndX.value = e.clientX || 0;
-  handleSwipe()
-}
+function onTouchStart(e) { touchStartX.value = e.changedTouches[0].clientX || 0 }
+function onTouchEnd(e) { touchEndX.value = e.changedTouches[0].clientX || 0; handleSwipe() }
+function onMouseDown(e) { touchStartX.value = e.clientX || 0 }
+function onMouseUp(e) { touchEndX.value = e.clientX || 0; handleSwipe() }
 
 function handleSwipe() {
   const dx = touchEndX.value - touchStartX.value
@@ -103,38 +92,36 @@ function handleSwipe() {
   else if (dx < -threshold) setActive((activeIndex.value + 1) % images.value.length)
 }
 
-// следим за активной картинкой для прокрутки миниатюр
+// Прокрутка миниатюр
 watch(activeIndex, n => {
   if (n < thumbStartIndex.value) thumbStartIndex.value = n
   else if (n >= thumbStartIndex.value + maxThumbs.value)
     thumbStartIndex.value = Math.max(0, n - maxThumbs.value + 1)
 })
 
-// корректируем индексы при изменении изображений
+// Корректировка индексов при изменении изображений
 watch(images, imgs => {
   if (!imgs || imgs.length === 0) {
-    activeIndex.value = 0;
-    thumbStartIndex.value = 0;
+    activeIndex.value = 0
+    thumbStartIndex.value = 0
     return
   }
   if (activeIndex.value >= imgs.length) activeIndex.value = 0
   thumbStartIndex.value = Math.min(thumbStartIndex.value, Math.max(0, imgs.length - maxThumbs.value))
-}, {deep: true})
+}, { deep: true })
 
-function goBack() {
-  router.push('/')
-}
-
-function toggleZoom() {
-  zoomed.value = !zoomed.value
-}
-
-
+// Навигация
+function goBack() { router.push('/') }
+function toggleZoom() { zoomed.value = !zoomed.value }
 </script>
 
+
+
 <template>
-  <div class="cream__header" :class="{ 'has-bg': cream.leftBgFile,}"
-  >
+  <div class="cream__header" >
+    <!-- Левый фон -->
+    <div v-if="leftBg" class="cream__bg left" :style="{ backgroundImage: `url(${leftBg})` }"></div>
+    <div v-if="rightBg" class="cream__bg right" :style="{ backgroundImage: `url(${rightBg})` }"></div>
     <div class="cream__block">
       <div class="cream__gallery">
         <div class="cream__main" @touchstart="onTouchStart" @touchend="onTouchEnd" @mousedown="onMouseDown"
@@ -155,7 +142,7 @@ function toggleZoom() {
               <source :srcset="`${img.webp1x} 1x, ${img.webp2x} 2x`" type="image/webp"/>
               <img :src="img.fallback" :alt="img.title || cream.title" class="cream__thumb-img"/>
             </picture>
-            <img v-else :src="img.fallback" :alt="img.title || cream.title" class="cream__thumb-img"/>
+<!--            <img v-else :src="img.fallback" :alt="img.title || cream.title" class="cream__thumb-img"/>-->
           </button>
         </div>
       </div>
@@ -220,6 +207,40 @@ function toggleZoom() {
   padding: 0 120px;
   margin: 0 auto;
   overflow: visible;
+
+  .cream__bg {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0; // чтобы контент был выше
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  .cream__bg.left {
+    top: 300px; // подогнать под дизайн
+    left: 0;
+    width: 52%;
+    height: 90%;
+    z-index: -1;
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  .cream__bg.right {
+    top: -100px;
+    right: 0;
+    width: 500px;
+    height: 500px;
+
+    @include vp-767 {
+      display: none;
+    }
+  }
 
   @include vp-767 {
     position: static;
@@ -424,6 +445,7 @@ function toggleZoom() {
 
         @include vp-767 {
           font-size: 32px;
+          width: 100%;
         }
       }
 
@@ -685,41 +707,5 @@ function toggleZoom() {
     }
   }
 }
-
-.cream__header.has-bg {
-  background-image: url("@/assets/img/lifting_bg1.png"), url("@/assets/img/lifting_bg1.png");
-  background-size: 500px, 400px;
-  background-position: right 0 top -100px, left 0 top -780px;
-  background-repeat: no-repeat;
-  position: relative;
-  overflow: visible;
-}
-
-//.cream__header::before,
-//.cream__header::after {
-//  content: '';
-//  position: absolute;
-//  background-size: contain;
-//  background-repeat: no-repeat;
-//  background-position: center;
-//  z-index: 0;
-//  pointer-events: none;
-//}
-//
-//.cream__header::before {
-//  background-image: var(--left-bg);
-//  width: 350px;
-//  height: 350px;
-//  top: 780px;
-//  left: 0;
-//}
-//
-//.cream__header::after {
-//  background-image: var(--right-bg);
-//  width: 400px;
-//  height: 400px;
-//  top: -100px;
-//  right: 0;
-//}
 
 </style>
