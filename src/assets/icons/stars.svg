@@ -1,0 +1,37 @@
+<svg width="95" height="19" viewBox="0 0 95 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <mask id="mask0_90_183" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="19" height="19">
+        <rect width="19" height="19" fill="#D9D9D9"/>
+    </mask>
+    <g mask="url(#mask0_90_183)">
+        <path d="M4.61138 16.625L5.89784 11.0635L1.58325 7.3229L7.28325 6.8281L9.49992 1.58331L11.7166 6.8281L17.4166 7.3229L13.102 11.0635L14.3885 16.625L9.49992 13.676L4.61138 16.625Z"
+              fill="currentColor"/>
+    </g>
+    <mask id="mask1_90_183" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="19" y="0" width="19" height="19">
+        <rect x="19" width="19" height="19" fill="#D9D9D9"/>
+    </mask>
+    <g mask="url(#mask1_90_183)">
+        <path d="M23.6114 16.625L24.8978 11.0635L20.5833 7.3229L26.2833 6.8281L28.4999 1.58331L30.7166 6.8281L36.4166 7.3229L32.102 11.0635L33.3885 16.625L28.4999 13.676L23.6114 16.625Z"
+              fill="currentColor"/>
+    </g>
+    <mask id="mask2_90_183" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="38" y="0" width="19" height="19">
+        <rect x="38" width="19" height="19" fill="#D9D9D9"/>
+    </mask>
+    <g mask="url(#mask2_90_183)">
+        <path d="M42.6114 16.625L43.8978 11.0635L39.5833 7.3229L45.2833 6.8281L47.4999 1.58331L49.7166 6.8281L55.4166 7.3229L51.102 11.0635L52.3885 16.625L47.4999 13.676L42.6114 16.625Z"
+              fill="currentColor"/>
+    </g>
+    <mask id="mask3_90_183" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="57" y="0" width="19" height="19">
+        <rect x="57" width="19" height="19" fill="#D9D9D9"/>
+    </mask>
+    <g mask="url(#mask3_90_183)">
+        <path d="M61.6114 16.625L62.8978 11.0635L58.5833 7.3229L64.2833 6.8281L66.4999 1.58331L68.7166 6.8281L74.4166 7.3229L70.102 11.0635L71.3885 16.625L66.4999 13.676L61.6114 16.625Z"
+              fill="currentColor"/>
+    </g>
+    <mask id="mask4_90_183" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="76" y="0" width="19" height="19">
+        <rect x="76" width="19" height="19" fill="#D9D9D9"/>
+    </mask>
+    <g mask="url(#mask4_90_183)">
+        <path d="M80.6114 16.625L81.8978 11.0635L77.5833 7.3229L83.2833 6.8281L85.4999 1.58331L87.7166 6.8281L93.4166 7.3229L89.102 11.0635L90.3885 16.625L85.4999 13.676L80.6114 16.625Z"
+              fill="currentColor"/>
+    </g>
+</svg>
