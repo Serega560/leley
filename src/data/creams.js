@@ -1,26 +1,42 @@
 export const creams = [
     {
         id: 1,
-        title:  "Ламеллярный крем с лифтинг эффектом",
+        title: "Ламеллярный крем с лифтинг эффектом",
         weight: "15 мл",
         category: "Крем",
         link: "https://www.ozon.ru/product/leley-lamellyarnyy-krem-dlya-kozhi-vokrug-glaz-s-lifting-effektom-ot-vseh-tipov-morshchin-ot-otekov-2121421631/?at=mqtkzGklEcLg2GrxCL52YGmF3LEwgQtVwonMJup2ERym",
         rating: "4.9",
-        review: "325 отзывов",
-        imgFile: "lifting.png",
-        imgFileMb: "lifting_mb.png",
+        review: "155 отзывов",
+        imgFile: "lifting.jpg",
+        imgFileMb: "lifting_mb.jpg",
         rightBgFile: "lifting_bg1.png",
         leftBgFile: "lifting_bg2.png",
-        gallery: [
+        comments: [
             {
-                fallback: new URL('../assets/img/lifting.png', import.meta.url).href,
-                webp1x: new URL('../assets/img/lifting.png?format=webp&width=400', import.meta.url).href,
-                webp2x: new URL('../assets/img/lifting.png?format=webp&width=800', import.meta.url).href
+                name: "Марина К.",
+                comment: "Крем очень нравится, заказала вторую баночку. Отличный состав крема. В составе есть все, чтобы " +
+                    "уменьшить выраженность возрастных и мимических морщин, улучшить плотность кожи. " +
+                    "Крем делает кожу более упругой и гладкой. Хорошо увлажняет кожу. Текстура крема лёгкая, " +
+                    "быстро впитывается, никакой липкости нет. Крем пришел хорошо упакованный. "
             },
             {
-                fallback: new URL('../assets/img/lifting_mb.png', import.meta.url).href,
-                webp1x: new URL('../assets/img/lifting_mb.png?format=webp&width=400', import.meta.url).href,
-                webp2x: new URL('../assets/img/lifting_mb.png?format=webp&width=800', import.meta.url).href
+                name: "Лариса А.",
+                comment: "заказала по совету блогера, пока нравится, пользуюсь несколько дней, аллергии нет, " +
+                    "впитывается мгновенно, напитывает кожу, чувствуется, что это ламеллярный крем, для моей " +
+                    "тонкой кожи - самое то!👍 Пока говорить о результате рано, думаю, будет накопительный эффект, " +
+                    "но в моменте, уже довольна)🫠 Спасибо производителю, рекомендую крем. "
+            }
+        ],
+        gallery: [
+            {
+                fallback: new URL('../assets/img/lifting.jpg', import.meta.url).href,
+                webp1x: new URL('../assets/img/lifting.jpg?format=webp&width=400', import.meta.url).href,
+                webp2x: new URL('../assets/img/lifting.jpg?format=webp&width=800', import.meta.url).href
+            },
+            {
+                fallback: new URL('../assets/img/lifting_mb.jpg', import.meta.url).href,
+                webp1x: new URL('../assets/img/lifting_mb.jpg?format=webp&width=400', import.meta.url).href,
+                webp2x: new URL('../assets/img/lifting_mb.jpg?format=webp&width=800', import.meta.url).href
             },
             // {
             //     fallback: new URL('../assets/img/doc_dp.jpg', import.meta.url).href,
@@ -83,16 +99,29 @@ export const creams = [
         category: "Крем",
         link: "https://www.ozon.ru/product/leley-lamellyarnyy-krem-flyuid-dlya-litsa-i-vek-s-peptidami-miorelaksantami-ot-mimicheskih-morshchin-1636237962/?at=83tB18v09uM8KL7ocDgRR7JSk3EoWOFqwYMy2SjqjDV1",
         rating: "4.9",
-        review: "325 отзывов",
-        imgFile: "peptidyMio.png",
+        review: "343 отзывов",
+        imgFile: "peptidyMio.jpg",
         imgFileMb: "peptidyMio_mb.png",
         rightBgFile: "peptidyMio_bg1.png",
         leftBgFile: "peptidyMio_bg2.png",
+        comments: [
+            {
+                name: "Екатерина Ш.",
+                comment: "Отличный крем-флюид, пользуюсь уже неделю, под впечатлением от эффекта, кожа насыщенная, " +
+                    "гладкая, морщинки разгладились. Состав замечательный, без парфюмерных отдушек. "
+            },
+            {
+                name: "Натали",
+                comment: "Кремы Leley я просто обожаю. Они все замечательные и эффективные. Поэтому когда появилась новинка я тут же купила. " +
+                    "Упаковано отлично. Дата изготовления свежайшая. Сам крем приятный, быстро впитывается. Не остается " +
+                    "ни липкости, ни жирности на коже. Отдушки нет, для меня это плюс. Состав, как всегда, отличный. Рекомендую. "
+            }
+        ],
         gallery: [
             {
-                fallback: new URL('../assets/img/peptidyMio.png', import.meta.url).href,
-                webp1x: new URL('../assets/img/peptidyMio.png?format=webp&width=400', import.meta.url).href,
-                webp2x: new URL('../assets/img/peptidyMio.png?format=webp&width=800', import.meta.url).href
+                fallback: new URL('../assets/img/peptidyMio.jpg', import.meta.url).href,
+                webp1x: new URL('../assets/img/peptidyMio.jpg?format=webp&width=400', import.meta.url).href,
+                webp2x: new URL('../assets/img/peptidyMio.jpg?format=webp&width=800', import.meta.url).href
             },
             {
                 fallback: new URL('../assets/img/peptidyMio_mb.png', import.meta.url).href,
@@ -163,21 +192,35 @@ export const creams = [
         category: "Крем",
         link: "https://www.ozon.ru/product/leley-omolazhivayushchiy-krem-flyuid-dlya-litsa-i-vek-s-peptidami-i-trokserutinom-protiv-morshchin-1041330871/?at=79tnl9nN3f0omW9lHyqAyjrTnjgPrxipnAWj3cj1NQVE",
         rating: "4.9",
-        review: "325 отзывов",
-        imgFile: "peptidyLico.png",
-        imgFileMb: "peptidyLico_mb.png",
+        review: "678 отзывов",
+        imgFile: "peptidyLico.jpg",
+        imgFileMb: "peptidyLico_mb.jpg",
         rightBgFile: "peptidyLico_bg1.png",
         leftBgFile: "peptidyLico_bg2.png",
-        gallery: [
+        comments: [
             {
-                fallback: new URL('../assets/img/peptidyLico.png', import.meta.url).href,
-                webp1x: new URL('../assets/img/peptidyLico.png?format=webp&width=400', import.meta.url).href,
-                webp2x: new URL('../assets/img/peptidyLico.png?format=webp&width=800', import.meta.url).href
+                name: "Лариса У.",
+                comment: "Как всегда LELEY радует. Покупаю третий крем. Чередую пептиды и церамиды .В наличии " +
+                    "тоник данного производителя. Достойное качество и кожа выглядит соответственно "
             },
             {
-                fallback: new URL('../assets/img/peptidyLico_mb.png', import.meta.url).href,
-                webp1x: new URL('../assets/img/peptidyLico_mb.png?format=webp&width=400', import.meta.url).href,
-                webp2x: new URL('../assets/img/peptidyLico_mb.png?format=webp&width=800', import.meta.url).href
+                name: "\n" +
+                    "Светлана Л.",
+                comment: "крем заказала по рекомендации химика. Рабочий состав , хорошо увлажняет кожу , нет " +
+                    "чувства стянутости и жжение. Срок изготовления наисвежайший , что очень порадовало. " +
+                    "Лёгкий прекрасный крем ❤️ рекомендую к покупке ‼️ "
+            }
+        ],
+        gallery: [
+            {
+                fallback: new URL('../assets/img/peptidyLico.jpg', import.meta.url).href,
+                webp1x: new URL('../assets/img/peptidyLico.jpg?format=webp&width=400', import.meta.url).href,
+                webp2x: new URL('../assets/img/peptidyLico.jpg?format=webp&width=800', import.meta.url).href
+            },
+            {
+                fallback: new URL('../assets/img/peptidyLico_mb.jpg', import.meta.url).href,
+                webp1x: new URL('../assets/img/peptidyLico_mb.jpg?format=webp&width=400', import.meta.url).href,
+                webp2x: new URL('../assets/img/peptidyLico_mb.jpg?format=webp&width=800', import.meta.url).href
             },
             {
                 // fallback: new URL('../assets/img/doc_du.jpg', import.meta.url).href,
@@ -235,16 +278,29 @@ export const creams = [
         category: "Крем",
         link: "https://www.ozon.ru/product/leley-lamellyarnyy-krem-flyuid-dlya-litsa-s-tseramidami-i-prebiotikom-dlya-vseh-tipov-kozhi-1042958905/?at=QktJO4Ap7cABpLYYtJ2ONv2fJwXjq5tq0NOvwho4RNzn",
         rating: "4.9",
-        review: "325 отзывов",
-        imgFile: "prebiotici.png",
+        review: "518 отзывов",
+        imgFile: "prebiotici.jpg",
         imgFileMb: "prebiotici_mb.png",
         rightBgFile: "prebiotici_bg1.png",
         leftBgFile: "prebiotici_bg2.png",
+        comments: [
+            {
+                name: "В. Татьяна",
+                comment: "Крем хороший. Покупала зимой по рекомендации косметолога. Легкий, хорошо впитывается. " +
+                    "Удобный дозатор. Хватает одного нажатия на раз. Пользуюсь второй месяц один раз в день (утром). Пока не кончился "
+            },
+            {
+                name: "Е. Юлия",
+                comment: "Крем выписал косметолог для восстановления сухой и обезвоженной кожи лица. " +
+                    "Применяла утром и на ночь после тоника. Крем со своей задачей полностью справился напитал и увлажнил. " +
+                    "Через 2 месяца перешла на однократное использование на ночь. Рекомендую к покупке "
+            }
+        ],
         gallery: [
             {
-                fallback: new URL('../assets/img/prebiotici.png', import.meta.url).href,
-                webp1x: new URL('../assets/img/prebiotici.png?format=webp&width=400', import.meta.url).href,
-                webp2x: new URL('../assets/img/prebiotici.png?format=webp&width=800', import.meta.url).href
+                fallback: new URL('../assets/img/prebiotici.jpg', import.meta.url).href,
+                webp1x: new URL('../assets/img/prebiotici.jpg?format=webp&width=400', import.meta.url).href,
+                webp2x: new URL('../assets/img/prebiotici.jpg?format=webp&width=800', import.meta.url).href
             },
             {
                 fallback: new URL('../assets/img/prebiotici_mb.png', import.meta.url).href,
@@ -307,22 +363,35 @@ export const creams = [
         weight: "30 мл",
         category: "Крем",
         link: "https://www.ozon.ru/product/leley-syvorotka-s-vitaminom-s-2-i-niatsinamidom-5-ot-morshchin-pigmentatsii-dlya-siyaniya-kozhi-1041369100/?at=36tWqYAlZc89nlG5SE8plGWFvggZwSYZ090MuRGVrr1",
-        rating: "4.9",
-        review: "325 отзывов",
-        imgFile: "vitamin.png",
-        imgFileMb: "vitamin_mb.png",
+        rating: "4.8",
+        review: "371 отзывов",
+        imgFile: "vitamin.jpg",
+        imgFileMb: "vitamin_mb.jpg",
         rightBgFile: "vitamin_bg1.png",
         leftBgFile: "vitamin_bg2.png",
-        gallery: [
+        comments: [
             {
-                fallback: new URL('../assets/img/vitamin.png', import.meta.url).href,
-                webp1x: new URL('../assets/img/vitamin.png?format=webp&width=400', import.meta.url).href,
-                webp2x: new URL('../assets/img/vitamin.png?format=webp&width=800', import.meta.url).href
+                name: "Елена Т.",
+                comment: "крем-сыворотка имеет приятную легкую текстуру, без запаха, что подкупает. Хорошая жирорастворимая " +
+                    "форма стабильного витамина С, что влияет на цену (читала у блогера расценки на формы витС)." +
+                    " Кожа реагирует хорошо, наношу утром, хватает порции размером с горошину на лицо и шею. "
             },
             {
-                fallback: new URL('../assets/img/vitamin_mb.png', import.meta.url).href,
-                webp1x: new URL('../assets/img/vitamin_mb.png?format=webp&width=400', import.meta.url).href,
-                webp2x: new URL('../assets/img/vitamin_mb.png?format=webp&width=800', import.meta.url).href
+                name: "Ольга Н.",
+                comment: "Покупаю уже не в первый раз. Быстро впитывается, не жирнит, при регулярно использовании " +
+                    "кожа прям насыщенная, красивая становится, во всяком случае мне так кажется))) "
+            }
+        ],
+        gallery: [
+            {
+                fallback: new URL('../assets/img/vitamin.jpg', import.meta.url).href,
+                webp1x: new URL('../assets/img/vitamin.jpg?format=webp&width=400', import.meta.url).href,
+                webp2x: new URL('../assets/img/vitamin.jpg?format=webp&width=800', import.meta.url).href
+            },
+            {
+                fallback: new URL('../assets/img/vitamin_mb.jpg', import.meta.url).href,
+                webp1x: new URL('../assets/img/vitamin_mb.jpg?format=webp&width=400', import.meta.url).href,
+                webp2x: new URL('../assets/img/vitamin_mb.jpg?format=webp&width=800', import.meta.url).href
             },
             {
                 // fallback: new URL('../assets/img/doc_du.jpg', import.meta.url).href,
@@ -379,21 +448,35 @@ export const creams = [
         category: "Сыворотка",
         link: "https://www.ozon.ru/product/leley-antivozrastnaya-syvorotka-s-peptidami-lanablyu-i-ekstraktom-shipovnika-ot-morshchin-30-ml-1855402527/?at=ywtAZEAo9s0WwKPAImDG4pviR1xVLBu8XjN8EFor69xA",
         rating: "4.9",
-        review: "325 отзывов",
-        imgFile: "peptidyKoja.png",
-        imgFileMb: "peptidyKoja_mb.png",
-        rightBgFile:"peptidyKoja_bg1.png",
-        leftBgFile:"peptidyKoja_bg2.png",
-        gallery: [
+        review: "204 отзывов",
+        imgFile: "peptidyKoja.jpg",
+        imgFileMb: "peptidyKoja_mb.jpg",
+        rightBgFile: "peptidyKoja_bg1.png",
+        leftBgFile: "peptidyKoja_bg2.png",
+        comments: [
             {
-                fallback: new URL('../assets/img/peptidyKoja.png', import.meta.url).href,
-                webp1x: new URL('../assets/img/peptidyKoja.png?format=webp&width=400', import.meta.url).href,
-                webp2x: new URL('../assets/img/peptidyKoja.png?format=webp&width=800', import.meta.url).href
+                name: "Мария С.",
+                comment: "Повторяю вторую баночку. Очень понравилась. Текстура лёгкая, на комби кожу ложится прекрасно, " +
+                    "впитывается мгновенно, не липкая, не скатывается. По ситуации могу даже кремом не закрывать, " +
+                    "увлажнения хватает. Для видимого результата пептиды используют минимум от 3мес. Мне одной баночки " +
+                    "как раз хватает примерно на этот срок. Состав прекрасный, банка рабочая "
             },
             {
-                fallback: new URL('../assets/img/peptidyKoja_mb.png', import.meta.url).href,
-                webp1x: new URL('../assets/img/peptidyKoja_mb.png?format=webp&width=400', import.meta.url).href,
-                webp2x: new URL('../assets/img/peptidyKoja_mb.png?format=webp&width=800', import.meta.url).href
+                name: "Наталья Л.",
+                comment: "Сыворотка легко распределяется ко коже, достаточно экономна, хорошо впитывается, нет " +
+                    "липкости после нанесения. Содержит в составе пептиды, рассчитываю на накопительный эффект. "
+            }
+        ],
+        gallery: [
+            {
+                fallback: new URL('../assets/img/peptidyKoja.jpg', import.meta.url).href,
+                webp1x: new URL('../assets/img/peptidyKoja.jpg?format=webp&width=400', import.meta.url).href,
+                webp2x: new URL('../assets/img/peptidyKoja.jpg?format=webp&width=800', import.meta.url).href
+            },
+            {
+                fallback: new URL('../assets/img/peptidyKoja_mb.jpg', import.meta.url).href,
+                webp1x: new URL('../assets/img/peptidyKoja_mb.jpg?format=webp&width=400', import.meta.url).href,
+                webp2x: new URL('../assets/img/peptidyKoja_mb.jpg?format=webp&width=800', import.meta.url).href
             },
             {
                 // fallback: new URL('../assets/img/doc_du.jpg', import.meta.url).href,
@@ -441,7 +524,7 @@ export const creams = [
             resultDescription: "Кожа становится заметно более упругой и гладкой; мелкие морщинки — менее выраженными; " +
                 "тон лица — ровнее; кожа — сияющей и ухоженной.",
 
-            aapplication: "Применение",
+            application: "Применение",
             applicationDescription: " Наносите утром и вечером на очищенную кожу лица и век. Легко распределите крем массирующими движениями.",
 
             declaration: "декларация",
@@ -453,17 +536,30 @@ export const creams = [
         weight: "30 мл",
         category: "Сыворотка",
         link: "https://www.ozon.ru/product/leley-syvorotka-vyravnivayushchaya-ton-s-traneksamovoy-kislotoy-i-ekstraktom-tsentelly-aziatskoy-2797212826/?at=gpt49gn6rh2G3gEyiJ0ryolt0Nwn0kfqQnZRgHmM68OL",
-        rating: "5",
-        review: "5 отзывов",
-        imgFile: "kislota.png",
+        rating: "4.9",
+        review: "13 отзывов",
+        imgFile: "kislota.jpg",
         imgFileMb: "kislota_mb.png",
-        rightBgFile:"kislota_bg1.png",
-        leftBgFile:"kislota_bg2.png",
+        rightBgFile: "kislota_bg1.png",
+        leftBgFile: "kislota_bg2.png",
+        comments: [
+            {
+                name: "Дарья",
+                comment: "Новинка) будем пробовать, запах приятный. Упаковано хорошо."
+            },
+            {
+                name: "М К.",
+                comment: "Если нужно работающее средство, которое, при этом, очень нежно относится к коже, то это оно! " +
+                    "Берите не задумываясь! Лично я в полном восторге! Средство быстро впитывается, не оставляет никакой липкости, " +
+                    "стянутости, сухости. Закрывала кремом Leley с церамидами. И не забудьте, что нужно использовать spf! " +
+                    "Очень понравился эффект! Я вижу результат! И ДА! Я РЕКОМЕНДУЮ эту сываротку и магазин Эффективная косметика!!! "
+            }
+        ],
         gallery: [
             {
-                fallback: new URL('../assets/img/kislota_mb.png', import.meta.url).href,
-                webp1x: new URL('../assets/img/kislota_mb.png?format=webp&width=400', import.meta.url).href,
-                webp2x: new URL('../assets/img/kislota_mb.png?format=webp&width=800', import.meta.url).href
+                fallback: new URL('../assets/img/kislota.jpg', import.meta.url).href,
+                webp1x: new URL('../assets/img/kislota.jpg?format=webp&width=400', import.meta.url).href,
+                webp2x: new URL('../assets/img/kislota.jpg?format=webp&width=800', import.meta.url).href
             },
             {
                 fallback: new URL('../assets/img/kislota_mb.png', import.meta.url).href,
@@ -525,21 +621,35 @@ export const creams = [
         category: "Сыворотка",
         link: "https://www.ozon.ru/product/leley-lifting-syvorotka-ot-morshchin-s-retinolom-0-15-i-ekstraktom-tsentelly-aziatskoy-2848551772/?at=Vvtz341B7sN0LVrxfkrKpNlhPXm7ZnSvOor0vu6rvNQz",
         rating: "5",
-        review: "3 отзыва",
-        imgFile: "retinol.png",
-        imgFileMb: "retinol_mb.png",
-        rightBgFile:"retinol_bg1.png",
-        leftBgFile:"retinol_bg2.png",
-        gallery: [
+        review: "8 отзыва",
+        imgFile: "retinol.jpg",
+        imgFileMb: "retinol_mb.jpg",
+        rightBgFile: "retinol_bg1.png",
+        leftBgFile: "retinol_bg2.png",
+        comments: [
             {
-                fallback: new URL('../assets/img/retinol.png', import.meta.url).href,
-                webp1x: new URL('../assets/img/retinol.png?format=webp&width=400', import.meta.url).href,
-                webp2x: new URL('../assets/img/retinol.png?format=webp&width=800', import.meta.url).href
+                name: "Юлия О.",
+                comment: "сыворотка без запаха, наносится легко. консистенция гелевый лёгкий крем. кожа сразу становится" +
+                    " матовой, закрывала кремом с церамидом. первые впечатления очень приятные, посмотрим по окончанию баночки. " +
+                    "надеюсь на положительный эффект так как фирма со своими средствами никогда не подводила! "
             },
             {
-                fallback: new URL('../assets/img/retinol_mb.png', import.meta.url).href,
-                webp1x: new URL('../assets/img/retinol_mb.png?format=webp&width=400', import.meta.url).href,
-                webp2x: new URL('../assets/img/retinol_mb.png?format=webp&width=800', import.meta.url).href
+                name: "Татьяна",
+                comment: "Нежная текстура. Давно хотела попробовать ретинол, и у Лелей он появился в небольшой концентрации, " +
+                    "как раз для новичков как я. Пока нанесла как первое знакомство на разные части рук. Чувствуется легкое " +
+                    "пощипывание, кожа не покраснела. Я думаю что ретинол в такой концентрации будет легким и щадящим. "
+            }
+        ],
+        gallery: [
+            {
+                fallback: new URL('../assets/img/retinol.jpg', import.meta.url).href,
+                webp1x: new URL('../assets/img/retinol.jpg?format=webp&width=400', import.meta.url).href,
+                webp2x: new URL('../assets/img/retinol.jpg?format=webp&width=800', import.meta.url).href
+            },
+            {
+                fallback: new URL('../assets/img/retinol_mb.jpg', import.meta.url).href,
+                webp1x: new URL('../assets/img/retinol_mb.jpg?format=webp&width=400', import.meta.url).href,
+                webp2x: new URL('../assets/img/retinol_mb.jpg?format=webp&width=800', import.meta.url).href
             },
             {
                 // fallback: new URL('../assets/img/doc_du.jpg', import.meta.url).href,
@@ -594,22 +704,38 @@ export const creams = [
         weight: "100 мл",
         category: "Тоник",
         link: "https://www.ozon.ru/product/leley-uvlazhnyayushchiy-omolazhivayushchiy-tonik-s-pantenolom-ektoinom-i-nuf-100-ml-1728660602/?at=08tYVyZDBcrKAow1UZBZ9LEsGwnXNGi6EqkW1HEmm2MV",
-        rating: "4.9",
-        review: "325 отзывов",
-        imgFile: "uvlTonic.png",
-        imgFileMb: "uvlTonic_mb.png",
-        rightBgFile:"uvlTonic_bg1.png",
-        leftBgFile:"uvlTonic_bg2.png",
-        gallery: [
+        rating: "4.8",
+        review: "156 отзывов",
+        imgFile: "uvlTonic.jpg",
+        imgFileMb: "uvlTonic_mb.jpg",
+        rightBgFile: "uvlTonic_bg1.png",
+        leftBgFile: "uvlTonic_bg2.png",
+        comments: [
             {
-                fallback: new URL('../assets/img/uvlTonic.png', import.meta.url).href,
-                webp1x: new URL('../assets/img/uvlTonic.png?format=webp&width=400', import.meta.url).href,
-                webp2x: new URL('../assets/img/uvlTonic.png?format=webp&width=800', import.meta.url).href
+                name: "Гюзель Р.",
+                comment: "Повторный заказ , очень довольна. Увлажнение, снятие раздражения, комфорт. " +
+                    "В жаркую погоду могу обходится без крема или сыворотки. Наношу на очищенную кожу " +
+                    "( гидрофильное масло, пенка), потом сыворотка, затем крем. Кожа комбинированная. " +
+                    "Колпачек меняю на распылитель ( идет в комплекте), очень удобно и приятно, " +
+                    "что производитель побеспокоился об этом. Спасибо."
             },
             {
-                fallback: new URL('../assets/img/uvlTonic_mb.png', import.meta.url).href,
-                webp1x: new URL('../assets/img/uvlTonic_mb.png?format=webp&width=400', import.meta.url).href,
-                webp2x: new URL('../assets/img/uvlTonic_mb.png?format=webp&width=800', import.meta.url).href
+                name: "Фаина С.",
+                comment: "Прекрасный увлажняющий тоник!!!! Это мой второй флакон и смело могу утверждать - " +
+                    "это «волшебное» многофункциональное средство полностью справляется с заявленными функциями. Пользуюсь, распыляя утром и вечером. " +
+                    "Иногда столь комфортно, что не ощущаешь нужды в сыворотке и креме. Очень хорошо увлажняет кожу. Спасибо Leley!!!!"
+            }
+        ],
+        gallery: [
+            {
+                fallback: new URL('../assets/img/uvlTonic.jpg', import.meta.url).href,
+                webp1x: new URL('../assets/img/uvlTonic.jpg?format=webp&width=400', import.meta.url).href,
+                webp2x: new URL('../assets/img/uvlTonic.jpg?format=webp&width=800', import.meta.url).href
+            },
+            {
+                fallback: new URL('../assets/img/uvlTonic_mb.jpg', import.meta.url).href,
+                webp1x: new URL('../assets/img/uvlTonic_mb.jpg?format=webp&width=400', import.meta.url).href,
+                webp2x: new URL('../assets/img/uvlTonic_mb.jpg?format=webp&width=800', import.meta.url).href
             },
             {
                 // fallback: new URL('../assets/img/doc_du.jpg', import.meta.url).href,
@@ -664,21 +790,35 @@ export const creams = [
         category: "Тоник",
         link: "https://www.ozon.ru/product/leley-matiruyushchiy-uvlazhnyayushchiy-tonik-s-5-niatsinamida-0-5-tsinka-i-prebiotikami-1610033976/?at=XQtk23kKpcxlBzzLfvMyXGQCXYo5xWfYYARj4SkB3Pr8",
         rating: "4.9",
-        review: "325 отзывов",
-        imgFile: "matTonic.png",
-        imgFileMb: "matTonic_mb.png",
-        rightBgFile:"matTonic_bg1.png",
-        leftBgFile:"matTonic_bg2.png",
-        gallery: [
+        review: "71 отзывов",
+        imgFile: "matTonic.jpg",
+        imgFileMb: "matTonic_mb.jpg",
+        rightBgFile: "matTonic_bg1.png",
+        leftBgFile: "matTonic_bg2.png",
+        comments: [
             {
-                fallback: new URL('../assets/img/matTonic.png', import.meta.url).href,
-                webp1x: new URL('../assets/img/matTonic.png?format=webp&width=400', import.meta.url).href,
-                webp2x: new URL('../assets/img/matTonic.png?format=webp&width=800', import.meta.url).href
+                name: "Татьяна Х.",
+                comment: "Отличный приятный тоник, цвет прозрачный, рещультат за два дня сложно оценить, применение понравилось. " +
+                    "Особо отмечу упаковку-сначала в пакет, потом в пупырку, потом в коробку. Все доехало в сохранности. " +
+                    "Впечатление приятное "
             },
             {
-                fallback: new URL('../assets/img/matTonic_mb.png', import.meta.url).href,
-                webp1x: new URL('../assets/img/matTonic_mb.png?format=webp&width=400', import.meta.url).href,
-                webp2x: new URL('../assets/img/matTonic_mb.png?format=webp&width=800', import.meta.url).href
+                name: "Ольга Л.",
+                comment: "Очень понравился тоник! Имеет консистенцию водички, без отдушки, что для чувствительной кожи очень важно. " +
+                    "Увлажнение чувствуешь с первого применения, кожа прям напитаная после него. " +
+                    "Матирующий эффект накопительный! Подошёл моей чувствительной коже с розацеа. Однозначно рекомендую! "
+            }
+        ],
+        gallery: [
+            {
+                fallback: new URL('../assets/img/matTonic.jpg', import.meta.url).href,
+                webp1x: new URL('../assets/img/matTonic.jpg?format=webp&width=400', import.meta.url).href,
+                webp2x: new URL('../assets/img/matTonic.jpg?format=webp&width=800', import.meta.url).href
+            },
+            {
+                fallback: new URL('../assets/img/matTonic_mb.jpg', import.meta.url).href,
+                webp1x: new URL('../assets/img/matTonic_mb.jpg?format=webp&width=400', import.meta.url).href,
+                webp2x: new URL('../assets/img/matTonic_mb.jpg?format=webp&width=800', import.meta.url).href
             },
             {
                 // fallback: new URL('../assets/img/doc_du.jpg', import.meta.url).href,

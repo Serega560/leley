@@ -1,27 +1,12 @@
 <script setup>
-import {ref} from "vue";
+import {ref, computed} from "vue";
 import Stars from "@/assets/icons/stars.svg";
+import { useRoute, useRouter } from 'vue-router';
+const route = useRoute()
+const creamId = computed(() => Number(route.params.id))
+const cream = computed(() => creams.find(c => c.id === creamId.value) || {})
+import { creams } from '../data/creams.js';
 
-const reviews = ref([
-  {
-    id: 1,
-    name: "Галина Ф.",
-    nameCream: "Восстанавливающий крем для лица",
-    rating: "5.0",
-    review: "Крем лёгкий, без запаха, быстро впитывается. Кажется стали бледнее сосуды расширенные. Надеюсь, " +
-        "улучшит мою кожу. "
-  },
-  {
-    id: 2,
-    name: "Александра А.",
-    nameCream: "Восстанавливающий крем для лица",
-    rating: "5.0",
-    review: "отличный крем, барьерный+нуф+много чего еще. структура шелковистая, " +
-        "впитывается, кожа становится напитанная." +
-        "Беру уже третий раз, хотелось бы подешевле и беру периодически другие крема " +
-        "подешевле, но возвращаюсь к этому. Очень советую! "
-  },
-]);
 
 </script>
 
@@ -29,31 +14,30 @@ const reviews = ref([
   <div class="rating-reviews" id="rating-reviews">
     <h2 class="rating-reviews__title">Рейтинг и Отзывы</h2>
     <div class="rating-reviews__block">
-      <div class="grade">
-        <p>Cредняя оценка 4.83
+      <div class="rating-reviews__grade">
+        <p>Cредняя оценка {{cream.rating}}
           <Stars/>
         </p>
         <img src="../assets/img/rating.png" width="349" height="139" alt="рейтинг"/>
       </div>
       <div class="rating-reviews__reviews">
-        <p>Всего <b>159 отзывов</b></p>
+        <p>Всего <b>{{cream.review}}</b></p>
         <ul class="rating-reviews__list">
-          <li class="rating-reviews__item" v-for="item in reviews" :key="item.id">
-            <span class="rating-reviews__name">{{ item.name }}</span>
-            <a class="rating-reviews__name-cream" target="_blank"
-               href="https://www.ozon.ru/product/darimay-vosstanavlivayushchiy-krem-dlya-litsa-i-vek-s-tseramidami-nuf-pantenolom-i-1136886739/?__rr=1&at=83tBDYNznIVvGmDPi1VwEnJCnAjO12IEEZDlDcwnR4lX">{{
-                item.nameCream
-              }}</a>
-            <span class="rating-reviews__rating">
-            {{ item.rating }}<Stars/>
-          </span>
-            <span class="rating-reviews__review">
-            {{ item.review }}
-          </span>
+          <li class="rating-reviews__item">
+            <span class="rating-reviews__name">{{ cream.comments[0].name}}</span>
+            <span class="rating-reviews__name-cream">{{cream.title }}</span>
+            <span class="rating-reviews__rating">{{cream.rating }}<Stars/></span>
+            <span class="rating-reviews__review">{{ cream.comments[0].comment}}</span>
+          </li>
+          <li class="rating-reviews__item">
+            <span class="rating-reviews__name">{{ cream.comments[1].name}}</span>
+            <span class="rating-reviews__name-cream">{{cream.title }}</span>
+            <span class="rating-reviews__rating">{{cream.rating }}<Stars/></span>
+            <span class="rating-reviews__review">{{cream.comments[1].comment}}</span>
           </li>
         </ul>
         <a class="rating-reviews__link" target="_blank"
-           href="https://www.ozon.ru/product/darimay-vosstanavlivayushchiy-krem-dlya-litsa-i-vek-s-tseramidami-nuf-pantenolom-i-1136886739/?__rr=1&at=83tBDYNznIVvGmDPi1VwEnJCnAjO12IEEZDlDcwnR4lX">
+           href="https://www.ozon.ru/search/?from_global=true&text=leley">
           Читать все отзывы
         </a>
       </div>
@@ -82,7 +66,7 @@ const reviews = ref([
       flex-direction: column;
     }
 
-    .grade {
+    .rating-reviews__grade {
 
       @include vp-767 {
         margin-bottom: 20px;
@@ -162,18 +146,16 @@ const reviews = ref([
       font-size: 14px;
       font-weight: 400;
       border-bottom: 1px solid var(--color-default-black);
-      width: max-content;
-      cursor: pointer;
 
-      &:hover {
-        color: var(--color-dodger-blue);
-        border-bottom: 1px solid var(--color-dodger-blue);
-
-        @include vp-767 {
-          color: var(--color-default-black);
-          border-bottom: 1px solid var(--color-default-black);
-        }
-      }
+      //&:hover {
+      //  color: var(--color-dodger-blue);
+      //  border-bottom: 1px solid var(--color-dodger-blue);
+      //
+      //  @include vp-767 {
+      //    color: var(--color-default-black);
+      //    border-bottom: 1px solid var(--color-default-black);
+      //  }
+      //}
     }
 
     .rating-reviews__rating {

@@ -52,6 +52,7 @@ onMounted(() => {
   checkMobile()
   window.addEventListener('resize', checkMobile)
 })
+
 onBeforeUnmount(() => {
   window.removeEventListener('resize', checkMobile)
 })
@@ -292,10 +293,11 @@ function toggleZoom() { zoomed.value = !zoomed.value }
     }
 
     .cream__img {
-      max-width: 100%;
+      width: 338px;
       object-fit: cover;
       display: block;
       max-height: 338px;
+      border-radius: 10px;
 
       @include vp-767 {
         object-fit: cover;

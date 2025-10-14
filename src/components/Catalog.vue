@@ -203,6 +203,7 @@ function goToDetail(id) {
       .catalog__img {
         width: 100%;
         height: 300px;
+        border-radius: 10px;
 
         @include vp-767 {
           margin-bottom: 10px;

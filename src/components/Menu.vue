@@ -159,6 +159,10 @@ defineProps({
 
       &:hover {
         color: var(--color-jordy-blue);
+
+        @include vp-767 {
+          color: var(--color-default-black);
+        }
       }
     }
   }
