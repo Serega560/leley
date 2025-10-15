@@ -1,9 +1,6 @@
 <script setup>
-import {useRouter} from 'vue-router'
 import {creams} from '../data/creams.js'
 import {ref, computed} from 'vue'
-
-const router = useRouter()
 
 // Активный таб
 const activeTab = ref('Все')
@@ -21,15 +18,6 @@ const filteredCreams = computed(() => {
   return creams.filter(cream => cream.category === activeTab.value)
 })
 
-function goToDetail(id) {
-  router.push({name: 'CreamDetail', params: {id}})
-      .then(() => {
-        window.scrollTo(0, 0)
-      })
-      .catch((err) => {
-        // игнорируем ошибки
-      })
-}
 </script>
 
 <template>
@@ -75,20 +63,31 @@ function goToDetail(id) {
         </li>
       </ul>
       <ul class="catalog__list">
-        <li v-for="(cream, id) in filteredCreams"
+        <li
+            v-for="cream in filteredCreams"
             :key="cream.id"
-            class="catalog__li">
-          <a class="catalog__item" @click.stop="goToDetail(cream.id)">
+            class="catalog__li"
+        >
+          <RouterLink
+              class="catalog__item"
+              :to="{ name: 'CreamDetail', params: { id: cream.id } }"
+              target="_blank"
+          >
             <picture>
-              <source :srcset="`${cream.webp1x} 1x, ${cream.webp2x} 2x`" type="image/webp"/>
-              <img :data-src="cream.fallback" width="767" height="767" alt="крем-новинка"
-                   class="catalog__img"/>
+              <source :srcset="`${cream.webp1x} 1x, ${cream.webp2x} 2x`" type="image/webp" />
+              <img
+                  :data-src="cream.fallback"
+                  width="767"
+                  height="767"
+                  alt="крем-новинка"
+                  class="catalog__img"
+              />
             </picture>
             <div class="catalog__title-small">
               <p>{{ cream.title }}</p>
               <span>{{ cream.weight }}</span>
             </div>
-          </a>
+          </RouterLink>
         </li>
       </ul>
     </div>
@@ -202,7 +201,7 @@ function goToDetail(id) {
 
       .catalog__img {
         width: 100%;
-        height: 300px;
+        height: auto;
         border-radius: 10px;
 
         @include vp-767 {

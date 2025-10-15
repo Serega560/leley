@@ -1,7 +1,7 @@
 export const creams = [
     {
         id: 1,
-        title: "Ламеллярный крем с лифтинг эффектом",
+        title: "Ламеллярный крем для кожи вокруг глаз с лифтинг эффектом от всех типов морщин, от отеков",
         weight: "15 мл",
         category: "Крем",
         link: "https://www.ozon.ru/product/leley-lamellyarnyy-krem-dlya-kozhi-vokrug-glaz-s-lifting-effektom-ot-vseh-tipov-morshchin-ot-otekov-2121421631/?at=mqtkzGklEcLg2GrxCL52YGmF3LEwgQtVwonMJup2ERym",
@@ -47,7 +47,7 @@ export const creams = [
         // imgDoc:"doc.dp.jpg",
         skinNeeds: "Крем подойдет всем типам кожи, обезвоженной, раздраженной, против борьбы с возрастными изменениями, " +
             "в период восстановления после пилингов.",
-        compound: "Состав INCI: Aqua, Cetearyl Olivate, Caprylic/Capric Triglyceride, Sorbitan Olivate, Glycerin, " +
+        compound: "Aqua, Cetearyl Olivate, Caprylic/Capric Triglyceride, Sorbitan Olivate, Glycerin, " +
             "Propylene Glycol, Dimethicone, Troxerutin, Butyrospermum Parkii (Shea) Butter, DL-Alpha Tocopheryl Acetate, " +
             "Dipeptide Diaminobutyroyl Benzylamide Diacetate, Acetyl Hexapeptide-8, Palmitoyl Tripeptide-5, Sodium PCA, " +
             "Sodium Lactate, Arginine, Aspartic Acid, PCA, Alanine, Glycine, Serine, Valine, Isoleucine, Threonine, " +
@@ -94,7 +94,7 @@ export const creams = [
     },
     {
         id: 2,
-        title: "Крем-флюид с пептидами-миорелаксантами",
+        title: "Ламеллярный крем-флюид для лица и век с пептидами-миорелаксантами от мимических морщин, отеков, увлажняющий",
         weight: "30 мл",
         category: "Крем",
         link: "https://www.ozon.ru/product/leley-lamellyarnyy-krem-flyuid-dlya-litsa-i-vek-s-peptidami-miorelaksantami-ot-mimicheskih-morshchin-1636237962/?at=83tB18v09uM8KL7ocDgRR7JSk3EoWOFqwYMy2SjqjDV1",
@@ -187,7 +187,7 @@ export const creams = [
     },
     {
         id: 3,
-        title: "Крем-флюид для лица с пептидами",
+        title: "Омолаживающий крем-флюид для лица и век с пептидами и троксерутином против морщин",
         weight: "30 мл",
         category: "Крем",
         link: "https://www.ozon.ru/product/leley-omolazhivayushchiy-krem-flyuid-dlya-litsa-i-vek-s-peptidami-i-trokserutinom-protiv-morshchin-1041330871/?at=79tnl9nN3f0omW9lHyqAyjrTnjgPrxipnAWj3cj1NQVE",
@@ -273,7 +273,7 @@ export const creams = [
     },
     {
         id: 4,
-        title: "Крем-флюид с церамидами и пребиотиком",
+        title: "Ламеллярный крем-флюид для лица с церамидами и пребиотиком для всех типов кожи",
         weight: "30 мл",
         category: "Крем",
         link: "https://www.ozon.ru/product/leley-lamellyarnyy-krem-flyuid-dlya-litsa-s-tseramidami-i-prebiotikom-dlya-vseh-tipov-kozhi-1042958905/?at=QktJO4Ap7cABpLYYtJ2ONv2fJwXjq5tq0NOvwho4RNzn",
@@ -315,13 +315,14 @@ export const creams = [
         ],
         // imgDoc:"doc.du.jpg",
         skinNeeds: "Крем подойдет всем типам кожи",
-        compound: "Вода, полиглицерил-3 цетиловый эфир, оливат/сукцинат, глицерин, комплекс церамидов " +
-            "(вода, церамиды 1 (EOS) и церамиды 2 (NS) и церамиды 3 (NP) и церамиды 6II (AP), бутиленгликоль, " +
-            "пентиленгликоль, гидрогенизированный лецитин, эфиры полиглицерил-10 каприловых/каприновых глицеридов), " +
-            "сквалан, бета-глюкан, лецитин, каприлик триглицерид, масло ши, масло жожоба, пантенол, инулин, " +
-            "альфа-глюкан олигосахарид, витамин Е, аллантоин, бисаболол, СО2 экстракт розмарина, сорбитол, " +
-            "феноксиэтанол и этилгексилглицерин, полиакрилатный кроссполимер- 6, бутиленгликоль, пентиленгликоль, " +
-            "токобиол С (α-токоферол, β-токоферол, γ-токоферол, δ-токоферол, β-ситостерол, глицерилиноленат), ЭДТА",
+        compound: "Water, polyglyceryl-3 cetyl ether olivate/succinate, glycerin, Ceramide Complex " +
+            "(ceramide EOS, ceramide NS, ceramide NP, ceramide AP, hydrogenated lecithin, caprylic/capric " +
+            "glycerides polyglycerin-10 esters), squalane, beta-glucan, lecithin, caprylic/capric triglyceride, " +
+            "butyrospermum parkii butter, panthenol, simmondsia chinensis (jojoba) seed oil, inulin, " +
+            "alpha-glucan oligosaccharide, bisabolol, allantoin, dL–alpha tocopheryl acetate, CO2- rosmarinus " +
+            "officinalis extract, sorbitol, phenoxyethanol and ethylhexylglycerin, polyacrylate crosspolymer-6, " +
+            "butylene glycol, pentylene glycol, tocobiol C (α-tocopherol, β-tocopherol, γ-tocopherol, δ-tocopherol, " +
+            "β-sitosterol, glyceryl linolenate), EDTA.",
 
         info: {
             advertising: "Ламеллярный крем-флюид с церамидами и пребиотиком — это лёгкий увлажняющий крем, предназначенный " +
@@ -359,7 +360,7 @@ export const creams = [
     },
     {
         id: 5,
-        title: "Крем-сыворотка с витамином С и ниацинамидом",
+        title: "Сыворотка с витамином С 2% и ниацинамидом 5% от морщин, пигментации, для сияния кожи",
         weight: "30 мл",
         category: "Крем",
         link: "https://www.ozon.ru/product/leley-syvorotka-s-vitaminom-s-2-i-niatsinamidom-5-ot-morshchin-pigmentatsii-dlya-siyaniya-kozhi-1041369100/?at=36tWqYAlZc89nlG5SE8plGWFvggZwSYZ090MuRGVrr1",
@@ -401,9 +402,10 @@ export const creams = [
         ],
         // imgDoc:"doc.du.jpg",
         skinNeeds: "Крем подойдет всем типам кожи",
-        compound: "вода, ниацинамид, аскорбил тетраизопальмитат, глицерин, гликоль пальмитат, пропиленгликоль, " +
-            "глицин, витамин Е, лецитин, трегалоза, сорбитол, СО2 экстракт шалфея, СО2 экстракт розмарина, " +
-            "СО2-экстракт зеленого чая, феноксиэтанол и этилгексилглицерин, аллантоин, акриловый сополимер, ЭДТА.",
+        compound: "Water, niacinamide, ascorbyl tetraisopalmitate, glycerin, glycol palmitate, propylene glycol, glycine, " +
+            "dL–alpha tocopheryl acetate, lecithin, trehalose, sorbitol, СО2- salvia officinalis (sage) extract, " +
+            "CO2- rosmarinus officinalis extract, СО2- camellia sinensis (green tea) leaf extract, phenoxyethanol " +
+            "and ethylhexylglycerin, allantoin, sodium acrylates copolymer, EDTA.",
 
         info: {
             advertising: " Сыворотка с витамином С 2 % и ниацинамидом 5 % — продуманная формула, объединяющая антиоксидантные " +
@@ -443,7 +445,7 @@ export const creams = [
     },
     {
         id: 6,
-        title: "Антивозрастная сыворотка с пептидами",
+        title: "Антивозрастная сыворотка с пептидами, ланаблю и экстрактом шиповника от морщин",
         weight: "30 мл",
         category: "Сыворотка",
         link: "https://www.ozon.ru/product/leley-antivozrastnaya-syvorotka-s-peptidami-lanablyu-i-ekstraktom-shipovnika-ot-morshchin-30-ml-1855402527/?at=ywtAZEAo9s0WwKPAImDG4pviR1xVLBu8XjN8EFor69xA",
@@ -532,7 +534,7 @@ export const creams = [
     },
     {
         id: 7,
-        title: "Сыворотка выравнивающая тон с транексамовой кислотой",
+        title: "Сыворотка выравнивающая тон с транексамовой кислотой и экстрактом центеллы азиатской",
         weight: "30 мл",
         category: "Сыворотка",
         link: "https://www.ozon.ru/product/leley-syvorotka-vyravnivayushchaya-ton-s-traneksamovoy-kislotoy-i-ekstraktom-tsentelly-aziatskoy-2797212826/?at=gpt49gn6rh2G3gEyiJ0ryolt0Nwn0kfqQnZRgHmM68OL",
@@ -616,7 +618,7 @@ export const creams = [
     },
     {
         id: 8,
-        title: "Лифтинг-сыворотка с ретинолом 0,15% в липосомах",
+        title: "Лифтинг-сыворотка от морщин с ретинолом 0,15% и экстрактом центеллы азиатской",
         weight: "30 мл",
         category: "Сыворотка",
         link: "https://www.ozon.ru/product/leley-lifting-syvorotka-ot-morshchin-s-retinolom-0-15-i-ekstraktom-tsentelly-aziatskoy-2848551772/?at=Vvtz341B7sN0LVrxfkrKpNlhPXm7ZnSvOor0vu6rvNQz",
@@ -700,7 +702,7 @@ export const creams = [
     },
     {
         id: 9,
-        title: "Увлажняющий тоник с пантенолом и эктоином",
+        title: "Увлажняющий, омолаживающий тоник с пантенолом, эктоином и НУФ",
         weight: "100 мл",
         category: "Тоник",
         link: "https://www.ozon.ru/product/leley-uvlazhnyayushchiy-omolazhivayushchiy-tonik-s-pantenolom-ektoinom-i-nuf-100-ml-1728660602/?at=08tYVyZDBcrKAow1UZBZ9LEsGwnXNGi6EqkW1HEmm2MV",
@@ -785,7 +787,7 @@ export const creams = [
     },
     {
         id: 10,
-        title: "Матирующий тоник с ниацинамидом и цинком",
+        title: "Матирующий, увлажняющий тоник с 5% ниацинамида, 0,5% цинка и пребиотиками для снижения жирности кожи",
         weight: "100 мл",
         category: "Тоник",
         link: "https://www.ozon.ru/product/leley-matiruyushchiy-uvlazhnyayushchiy-tonik-s-5-niatsinamida-0-5-tsinka-i-prebiotikami-1610033976/?at=XQtk23kKpcxlBzzLfvMyXGQCXYo5xWfYYARj4SkB3Pr8",

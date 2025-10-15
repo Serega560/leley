@@ -146,6 +146,11 @@ import { creams } from '../data/creams.js';
       font-size: 14px;
       font-weight: 400;
       border-bottom: 1px solid var(--color-default-black);
+      width: max-content;
+
+      @include vp-767 {
+        width: 100%;
+      }
 
       //&:hover {
       //  color: var(--color-dodger-blue);

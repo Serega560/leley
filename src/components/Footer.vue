@@ -14,7 +14,7 @@ import Telegram from '@/assets/icons/telegram.svg'
 
         <div>
           <Menu :inFooter="true"/>
-          <router-link :to="{ name: 'Declarations' }" class="declaration">Декларации</router-link>
+<!--          <router-link :to="{ name: 'Declarations' }" class="declaration">Декларации</router-link>-->
         </div>
 
         <div class="footer__details">
@@ -22,6 +22,8 @@ import Telegram from '@/assets/icons/telegram.svg'
           <p>ИП Квас Евгений Станиславович</p>
           <p>ОГРНИП 98582476586548</p>
           <p>ИНН 3872178873287421387</p>
+          <h2 class="footer__address">Адрес производства</h2>
+          <p>188640, Россия  Ленинградская обл, Всеволожский р-н, г. Всеволожск, пр. Всеволожский, д. 122, пом. № 73</p>
         </div>
         <div class="footer__accounts">
           <h2>Наши аккаунты</h2>
@@ -66,7 +68,7 @@ import Telegram from '@/assets/icons/telegram.svg'
 
   .footer__block {
     display: grid;
-    grid-template-columns: 252px 160px 245px 1fr;
+    grid-template-columns: 252px 160px 295px 1fr;
     gap: 0 99px;
     margin-bottom: 60px;
 
@@ -83,6 +85,10 @@ import Telegram from '@/assets/icons/telegram.svg'
       @include vp-767 {
         font-size: 16px;
       }
+    }
+
+    .footer__address {
+      margin-top: 15px;
     }
 
     .declaration {

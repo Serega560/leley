@@ -33,10 +33,10 @@ function scrollToCatalog() {
   <div class="hero">
     <div class="container">
       <div class="hero__block">
-        <h1 class="hero__title">LELEY — восстановление и поддержание</h1>
+        <h1 class="hero__title">LELEY — восстановление и бережное сохранение Вашей красоты</h1>
         <div class="hero__description">
           <p class="hero__subtitle">физиологическая косметика</p>
-          <p class="hero__text">Нежные текстуры, натуральные ингредиенты и безопасные формулы — всё, что нужно для ежедневного ритуала красоты.</p>
+          <p class="hero__text">Нежные текстуры, эффективные дозировки, рабочие формулы - все, что нужно для ежедневного ритуала красоты.</p>
           <p class="hero__text">Каждый продукт создан с заботой о коже и уважением к природе, чтобы твой уход был простым, приятным и по-настоящему эффективным.</p>
           <!-- Добавьте prevent для полной уверенности -->
           <a href="#" class="hero__button button" @click.prevent="goToCatalog">

@@ -7,24 +7,22 @@
     <div class="container">
       <h1 class="new__title">Новинки</h1>
       <div class="mew__block">
-        <a href="https://www.ozon.ru/product/leley-lamellyarnyy-krem-dlya-kozhi-vokrug-glaz-s-lifting-effektom-ot-vseh-tipov-morshchin-ot-otekov-2121421631/?at=mqtkzGklEcLg2GrxCL52YGmF3LEwgQtVwonMJup2ERym">
-          <img class="mew__img-ds" src="../assets/img/new_1.png" width="692" height="409" alt="фото крема">
-          <img class="mew__img-mb" src="../assets/img/new_1mb.png" width="335" height="147" alt="фото крема">
+        <a target="_blank" href="https://www.ozon.ru/product/leley-syvorotka-vyravnivayushchaya-ton-s-traneksamovoy-kislotoy-i-ekstraktom-tsentelly-aziatskoy-2797212826/?at=Vvtz3oVVMuWX0KQGSgOJ3ALTPR65PMUDnYDRGTQGJ54z">
+          <img class="mew__img" src="../assets/img/kislota.jpg" width="387" height="384" alt="фото крема">
           <div class="mew__subtitle-weight">
-          <p class="new__subtitle">Ламеллярный крем с лифтинг — эффектом</p>
-            <span class="mew__weight">15 мл</span>
+          <p class="new__subtitle">Сыворотка выравнивающая тон с транексамовой кислотой и экстрактом центеллы азиатской</p>
+            <span class="mew__weight">30 мл</span>
           </div>
           <p class="new__description">Сыворотка содержит высокие концентрации активных компонентов и обладает
             антиоксидантным действием, замедляет процессы старения, стимулирует  синтез коллагена, эластина и
             гиалуроновой кислоты. Сыворотка борется....</p>
         </a>
 
-        <a href="https://www.ozon.ru/product/leley-uvlazhnyayushchiy-omolazhivayushchiy-tonik-s-pantenolom-ektoinom-i-nuf-100-ml-1728660602/?at=08tYVyZDBcrKAow1UZBZ9LEsGwnXNGi6EqkW1HEmm2MV">
-          <img class="mew__img-ds" src="../assets/img/new_2.png" width="488" height="409" alt="фото крема">
-          <img class="mew__img-mb" src="../assets/img/new_2mb.png" width="335" height="147" alt="фото крема">
+        <a target="_blank" href="https://www.ozon.ru/product/leley-lifting-syvorotka-ot-morshchin-s-retinolom-0-15-i-ekstraktom-tsentelly-aziatskoy-2848551772/?at=ywtAZ5GGYTBBX04niyzOAPLh4PKA2Lu8AOXm8CVP0OW">
+          <img class="mew__img" src="../assets/img/retinol.jpg" width="387" height="384" alt="фото крема">
           <div class="mew__subtitle-weight">
-            <p class="new__subtitle">Увлажняющий омолаживающий тоник</p>
-            <span class="mew__weight">100 мл</span>
+            <p class="new__subtitle">Лифтинг-сыворотка от морщин с ретинолом 0,15% и экстрактом центеллы азиатской</p>
+            <span class="mew__weight">30 мл</span>
           </div>
           <p class="new__description">Сыворотка содержит высокие концентрации активных компонентов и
             обладает  антиоксидантным действием, замедляет процессы старения,
@@ -60,30 +58,21 @@
   }
 
   .mew__block {
-    display: grid;
-    grid-template-columns: 692px 488px;
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 
     @include vp-767 {
       grid-template-columns: 1fr;
     }
 
-    .mew__img-ds {
+    .mew__img {
       margin-bottom: 14px;
+      border-radius: 15px;
 
       @include vp-767 {
-        display: none;
-      }
-    }
-
-    .mew__img-mb {
-      display: none;
-
-      @include vp-767 {
-        display: block;
-        margin-bottom: 12px;
         width: 100%;
-        object-fit: cover;
+        height: auto;
       }
     }
 
@@ -94,12 +83,11 @@
       gap: 10px;
 
       .new__subtitle {
-        width: 370px;
+        width: 320px;
 
         @include vp-767 {
           font-size: 14px;
           width: 100%;
-
         }
       }
 
@@ -118,6 +106,11 @@
     .new__description {
       font-size: 14px;
       color: #666666;
+      width: 387px;
+
+      @include vp-767 {
+        width: 100%;
+      }
     }
   }
 }

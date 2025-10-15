@@ -7,7 +7,7 @@ import Wilberris from "@/assets/icons/wildberries.svg"
   <div class="market">
     <div class="container">
       <div class="market__block">
-        <a class="market__ozon" target="_blank" href="https://www.ozon.ru/search/?from_global=true&text=leley">
+        <a class="market__ozon" target="_blank" href="https://www.ozon.ru/seller/effektivnaya-kosmetika-792385/?miniapp=seller_792385">
 <!--          <picture>-->
 <!--            <img class="market__bg market__bg&#45;&#45;ds" src="../assets/img/ozon_ds.png" width="588" height="172"-->
 <!--                 alt="фото крема на фоне ozon"/>-->
@@ -20,7 +20,7 @@ import Wilberris from "@/assets/icons/wildberries.svg"
               <Ozon/>
             </div>
             <a class="market__button button" target="_blank"
-               href="https://www.ozon.ru/search/?from_global=true&text=leley">Подробнее</a>
+               href="https://www.ozon.ru/seller/effektivnaya-kosmetika-792385/?miniapp=seller_792385">Подробнее</a>
           </div>
         </a>
 <!--        стили для двух маркетплэйсов-->

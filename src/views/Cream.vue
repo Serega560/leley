@@ -443,7 +443,7 @@ function toggleZoom() { zoomed.value = !zoomed.value }
         font-family: "Source Serif 4", serif;
         line-height: 100%;
         text-transform: uppercase;
-        width: 550px;
+        width: 600px;
 
         @include vp-767 {
           font-size: 32px;
