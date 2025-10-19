@@ -26,6 +26,11 @@ defineProps({
     <a :href="`https://mail.google.com/mail/?view=cm&fs=1&to=info@leley.ru`" target="_blank">
       <Mail class="contacts__mail"/>
     </a>
+
+    <h2>Наш телеграм-канал</h2>
+    <a target="_blank" href="https://t.me/+Lg7reEr4YW0xY2Uy">
+      <Telegram class="contacts__telegram"/>
+    </a>
   </div>
 </template>
 
@@ -37,10 +42,20 @@ defineProps({
   display: flex;
   gap: 0 20px;
   align-items: center;
+  flex-wrap: wrap;
 
   @include vp-767 {
-    flex-direction: column;
-    align-items: start;
+    align-items: center;
+  }
+
+  h2 {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: left;
+
+    @include vp-767 {
+      font-size: 16px;
+    }
   }
 
   .contacts__telegram {

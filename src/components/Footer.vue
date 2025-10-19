@@ -14,7 +14,7 @@ import Telegram from '@/assets/icons/telegram.svg'
 
         <div>
           <Menu :inFooter="true"/>
-<!--          <router-link :to="{ name: 'Declarations' }" class="declaration">Декларации</router-link>-->
+          <router-link :to="{ name: 'Declarations' }" class="declaration">Декларации</router-link>
         </div>
 
         <div class="footer__details">
@@ -26,7 +26,7 @@ import Telegram from '@/assets/icons/telegram.svg'
           <p>188640, Россия  Ленинградская обл, Всеволожский р-н, г. Всеволожск, пр. Всеволожский, д. 122, пом. № 73</p>
         </div>
         <div class="footer__accounts">
-          <h2>Наши аккаунты</h2>
+          <h2>Наши контакты связи</h2>
           <Contacts :inFooter="true"/>
           <router-link :to="{ name: 'PrivacyPolicy' }" class="footer__confidentiality">
             Политика конфиденциальности

@@ -1,7 +1,15 @@
 <script setup>
 import {ref} from 'vue'
-// import docPeptides from '@/assets/img/doc_dp.jpg'
-// import docCeramides from '@/assets/img/doc_dc.jpg'
+import docAntyVozrast from '@/assets/img/diclaration/antiVozrast.jpg'
+import docCeramidy from '@/assets/img/diclaration/ceramidy.jpg'
+import docLifting from '@/assets/img/diclaration/lifting.jpg'
+import docMatTonic from '@/assets/img/diclaration/matTonic.jpg'
+import docPeptidyMio from '@/assets/img/diclaration/peptidyMio.jpg'
+import docRetinol from '@/assets/img/diclaration/retinol.jpg'
+import docTraneksamovaya from '@/assets/img/diclaration/traneksamovaya.jpg'
+import docUvlTonic from '@/assets/img/diclaration/uvlTonic.jpg'
+import docPeptidy from '@/assets/img/diclaration/peptidy.jpg'
+import docVitamin from '@/assets/img/diclaration/vitamin.jpg'
 
 const currentDoc = ref(null)
 
@@ -36,20 +44,78 @@ watch(currentDoc, (val) => {
     <div class="container">
       <header class="declarations__header">
         <h1 id="declarations-title" class="declarations__title">Декларации</h1>
-        <p class="declarations__subtitle">Здесь можно ознакомиться с документами. Откроется в новой вкладке.</p>
+        <p class="declarations__subtitle">Здесь можно ознакомиться с документами.</p>
       </header>
 
       <div class="declarations__grid">
         <article class="declarations__item">
-          <h2 class="declarations__item-title">Декларация. Пептиды</h2>
-          <p class="declarations__item-desc">Краткое описание декларации (год, номер и т.п.).</p>
-          <button class="declarations__button button" @click="openDoc(docPeptides)">Открыть</button>
+          <h2 class="declarations__item-title">Декларация соответствия на Ламеллярный крем для кожи вокруг глаз с лифтинг эффектом от всех типов морщин, от отеков</h2>
+          <p class="declarations__item-desc">RU.0001.511172</p>
+          <p class="declarations__item-desc">Действительно до: 30.01.2030</p>
+          <button class="declarations__button button" @click="openDoc(docAntyVozrast)">Открыть</button>
         </article>
 
         <article class="declarations__item">
-          <h2 class="declarations__item-title">Декларация. Церамиды</h2>
-          <p class="declarations__item-desc">Краткое описание декларации (год, номер и т.п.).</p>
-          <button class="declarations__button button" @click="openDoc(docCeramides)">Открыть</button>
+          <h2 class="declarations__item-title">Декларация соответствия на Ламеллярный крем-флюид для лица с церамидами и пребиотиком для всех типов кожи</h2>
+          <p class="declarations__item-desc">RU.0001.511172</p>
+          <p class="declarations__item-desc">Действительно до: 14.09.2029</p>
+          <button class="declarations__button button" @click="openDoc(docCeramidy)">Открыть</button>
+        </article>
+
+        <article class="declarations__item">
+          <h2 class="declarations__item-title">Декларация соответствия на Ламеллярный крем для кожи вокруг глаз с лифтинг эффектом от всех типов морщин, от отеков</h2>
+          <p class="declarations__item-desc">RU.0001.21ПН87</p>
+          <p class="declarations__item-desc">Действительно до: 10.05.2030</p>
+          <button class="declarations__button button" @click="openDoc(docLifting)">Открыть</button>
+        </article>
+
+        <article class="declarations__item">
+          <h2 class="declarations__item-title">Декларация соответствия на Матирующий, увлажняющий тоник с 5% ниацинамида, 0,5% цинка и пребиотиками для снижения жирности кожи</h2>
+          <p class="declarations__item-desc">RU.0001.511172</p>
+          <p class="declarations__item-desc">Действительно до: 14.09.2029</p>
+          <button class="declarations__button button" @click="openDoc(docMatTonic)">Открыть</button>
+        </article>
+
+        <article class="declarations__item">
+          <h2 class="declarations__item-title">Декларация соответствия на Ламеллярный крем-флюид для лица и век с пептидами-миорелаксантами от мимических морщин, отеков, увлажняющий</h2>
+          <p class="declarations__item-desc">RU.0001.511172</p>
+          <p class="declarations__item-desc">Действительно до: 14.09.2029</p>
+          <button class="declarations__button button" @click="openDoc(docPeptidyMio)">Открыть</button>
+        </article>
+
+        <article class="declarations__item">
+          <h2 class="declarations__item-title">Декларация соответствия на Сыворотку выравнивающую тон с транексамовой кислотой и экстрактом центеллы азиатской</h2>
+          <p class="declarations__item-desc">RU.0001.21ПН87</p>
+          <p class="declarations__item-desc">Действительно до: 11.09.2030</p>
+          <button class="declarations__button button" @click="openDoc(docTraneksamovaya)">Открыть</button>
+        </article>
+
+        <article class="declarations__item">
+          <h2 class="declarations__item-title">Декларация соответствия на Лифтинг-сыворотку от морщин с ретинолом 0,15% и экстрактом центеллы азиатской</h2>
+          <p class="declarations__item-desc">RU.0001.511172</p>
+          <p class="declarations__item-desc">Действительно до: 14.09.2029</p>
+          <button class="declarations__button button" @click="openDoc(docRetinol)">Открыть</button>
+        </article>
+
+        <article class="declarations__item">
+          <h2 class="declarations__item-title">Декларация соответствия на Омолаживающий крем-флюид для лица и век с пептидами и троксерутином против морщин</h2>
+          <p class="declarations__item-desc">RU.0001.511172</p>
+          <p class="declarations__item-desc">Действительно до: 14.09.2029</p>
+          <button class="declarations__button button" @click="openDoc(docPeptidy)">Открыть</button>
+        </article>
+
+        <article class="declarations__item">
+          <h2 class="declarations__item-title">Декларация соответствия на Сыворотку с витамином С 2% и ниацинамидом 5% от морщин, пигментации, для сияния кожи</h2>
+          <p class="declarations__item-desc">RU.0001.511172</p>
+          <p class="declarations__item-desc">Действительно до: 14.09.2029</p>
+          <button class="declarations__button button" @click="openDoc(docVitamin)">Открыть</button>
+        </article>
+
+        <article class="declarations__item">
+          <h2 class="declarations__item-title">Декларация соответствия на Увлажняющий, омолаживающий тоник с пантенолом, эктоином и НУФ</h2>
+          <p class="declarations__item-desc">RU.0001.511172</p>
+          <p class="declarations__item-desc">Действительно до: 16.10.2029</p>
+          <button class="declarations__button button" @click="openDoc(docUvlTonic)">Открыть</button>
         </article>
       </div>
 
@@ -69,6 +135,10 @@ watch(currentDoc, (val) => {
 .declarations {
   padding: 40px 0;
 
+  @include vp-767 {
+    padding: 0 0 40px;
+  }
+
   &__header {
     margin-bottom: 24px;
     text-align: left;
@@ -80,7 +150,7 @@ watch(currentDoc, (val) => {
     font-weight: 700;
 
     @include vp-767 {
-      font-size: 32px;
+      font-size: 22px;
     }
   }
 
@@ -115,13 +185,17 @@ watch(currentDoc, (val) => {
 
   &__item-title {
     font-size: 20px;
-    margin: 0 0 8px;
+    margin: 0 0 15px;
+
+    @include vp-767 {
+      font-size: 16px;
+    }
   }
 
   &__item-desc {
     font-size: 15px;
     color: #444;
-    margin: 0 0 16px;
+    margin: 0 0 10px;
     flex: 1;
 
     @include vp-767 {
@@ -133,6 +207,7 @@ watch(currentDoc, (val) => {
     align-self: start;
     display: inline-block;
     font-size: 15px;
+    margin-top: 15px;
 
     @include vp-767 {
       padding: 6px 33px;
@@ -151,6 +226,7 @@ watch(currentDoc, (val) => {
   align-items: center;
   z-index: 1000;
   overflow: hidden;
+  background-color: rgba(153, 153, 153, 0.7);
 }
 
 .modal__close {
@@ -169,7 +245,7 @@ watch(currentDoc, (val) => {
     right: 30px;
     font-size: 12px;
     padding: 6px 14px;
-    top: 60px;
+    top: 65px;
   }
 }
 
@@ -178,12 +254,13 @@ watch(currentDoc, (val) => {
   height: 80%;
   max-width: 95%;
 
-  //@include vp-767 {
-  //  top: 10px;
-  //  right: 10px;
-  //  font-size: 14px;
-  //  padding: 6px 12px;
-  //}
+  @include vp-767 {
+    top: 10px;
+    right: 10px;
+    font-size: 14px;
+    padding: 6px 12px;
+    height: auto;
+  }
 }
 
 .body-no-scroll {

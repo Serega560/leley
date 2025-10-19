@@ -173,7 +173,7 @@ function toggleZoom() { zoomed.value = !zoomed.value }
           </p>
         </div>
         <div class="cream__link">
-          <a class="cream__button button button--next" :href="cream.link">
+          <a target="_blank" class="cream__button button button--next" :href="cream.link">
             <span>Купить <span class="cream__mobile">на</span></span>
             <Next class="cream__next-svg"/>
             <Ozon class="cream__ozon-svg" />

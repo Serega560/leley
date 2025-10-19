@@ -362,7 +362,7 @@ export const creams = [
         id: 5,
         title: "Сыворотка с витамином С 2% и ниацинамидом 5% от морщин, пигментации, для сияния кожи",
         weight: "30 мл",
-        category: "Крем",
+        category: "Сыворотка",
         link: "https://www.ozon.ru/product/leley-syvorotka-s-vitaminom-s-2-i-niatsinamidom-5-ot-morshchin-pigmentatsii-dlya-siyaniya-kozhi-1041369100/?at=36tWqYAlZc89nlG5SE8plGWFvggZwSYZ090MuRGVrr1",
         rating: "4.8",
         review: "371 отзывов",

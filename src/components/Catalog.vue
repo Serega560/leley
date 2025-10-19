@@ -163,7 +163,7 @@ const filteredCreams = computed(() => {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 25px 20px;
-    justify-content: space-between;
+    justify-content: center;
 
     @include vp-767 {
       grid-template-columns: 1fr;
