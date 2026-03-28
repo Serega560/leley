@@ -29,7 +29,7 @@ defineProps({
 
     <h2>Наш телеграм-канал</h2>
     <a target="_blank" href="https://t.me/+Lg7reEr4YW0xY2Uy">
-      <Telegram class="contacts__telegram"/>
+      <Telegram class="contacts__telegram contacts__telegram--footer"/>
     </a>
   </div>
 </template>
@@ -49,13 +49,11 @@ defineProps({
   }
 
   h2 {
-    margin-top: 20px;
-    font-size: 18px;
-    text-align: left;
+    display: none;
+  }
 
-    @include vp-767 {
-      font-size: 16px;
-    }
+  .contacts__telegram--footer {
+    display: none;
   }
 
   .contacts__telegram {
@@ -108,6 +106,24 @@ defineProps({
 }
 
 .contacts--footer {
+  margin-bottom: 10px;
+
+  h2 {
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: left;
+    display: block;
+
+    @include vp-767 {
+      font-size: 16px;
+      width: 100%;
+    }
+  }
+
+  .contacts__telegram--footer {
+    display: block;
+  }
+
   .contacts__telegram {
     width: 40px;
     height: 40px;

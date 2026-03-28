@@ -1,93 +1,84 @@
 <script setup>
-import {ref} from "vue";
-
-const WEB3FORMS_ACCESS_KEY = "95581d1d-968a-4174-9fa3-4005e5938a26";
+import { ref } from "vue";
 
 const name = ref("");
 const email = ref("");
 const phone = ref("");
 const comment = ref("");
 const loading = ref(false);
+const formRef = ref(null);
+const agreement = ref(false); // добавили ref для чекбокса
 
-function validateEmail(email) {
-  // Проверяем минимум наличие @ и точку после неё
-  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return re.test(email);
+// файл (для отображения названия)
+const fileName = ref("📎 Прикрепить файл");
+
+function handleFile(e) {
+  const f = e.target.files?.[0] || null;
+  fileName.value = f ? `Файл: ${f.name}` : "📎 Прикрепить файл";
 }
 
-function validatePhone(phone) {
-  // Формат +7 и ровно 10 цифр после
-  const re = /^\+7\d{10}$/;
-  return re.test(phone);
+// ===== валидация =====
+function validateEmail(v) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+}
+
+function validatePhone(v) {
+  return /^\+7\d{10}$/.test(v);
 }
 
 function onPhoneFocus() {
-  if (!phone.value) {
-    phone.value = "+7";
-  }
+  if (!phone.value) phone.value = "+7";
 }
 
-function onPhoneInput(event) {
-  let value = event.target.value;
-
-  if (value.startsWith("+")) {
-    // Оставляем + в начале, остальное цифры
-    value = "+" + value.slice(1).replace(/\D/g, "");
-  } else {
-    // Если без +, оставляем только цифры
-    value = value.replace(/\D/g, "");
-  }
-  phone.value = value;
+function onPhoneInput(e) {
+  let v = e.target.value;
+  phone.value = v.startsWith("+") ? "+" + v.slice(1).replace(/\D/g, "") : v.replace(/\D/g, "");
 }
 
+// ===== отправка формы =====
 async function sendForm() {
-  if (!email.value && !phone.value) {
-    alert("Пожалуйста, укажите Email или Телефон.");
-    return;
-  }
-
-  if (email.value && !validateEmail(email.value)) {
-    alert("Пожалуйста, введите корректный Email с символом '@'.");
-    return;
-  }
-
-  if (phone.value && !validatePhone(phone.value)) {
-    alert("Пожалуйста, введите корректный номер телефона в формате +7XXXXXXXXXX.");
+  if (!agreement.value) {
+    alert("Вы должны согласиться с политикой обработки персональных данных перед отправкой формы.");
     return;
   }
 
   loading.value = true;
+  const formData = new FormData();
 
-  const payload = {
-    access_key: WEB3FORMS_ACCESS_KEY,
-    name: name.value,
-    email: email.value,
-    phone: phone.value,
-    message: comment.value
-  };
+  // Добавляем вручную, чтобы точно передать значения
+  formData.append("name", name.value);
+  formData.append("email", email.value);
+  formData.append("comment", comment.value);
 
   try {
-    const response = await fetch("https://api.web3forms.com/submit", {
+    const res = await fetch("sendmail.php", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(payload)
+      body: formData,
     });
-    const result = await response.json();
 
-    if (result.success) {
-      alert("Заявка отправлена!");
-      name.value = "";
-      email.value = "";
-      phone.value = "";
-      comment.value = "";
-    } else {
-      alert("Ошибка при отправке: " + (result.message || "Неизвестная ошибка"));
+    // Проверяем статус
+    if (!res.ok) {
+      throw new Error(`Ошибка сервера: ${res.status}`);
     }
-  } catch (error) {
-    alert("Ошибка сети или сервера: " + error.message);
+
+    // Пробуем распарсить ответ как JSON
+    const data = await res.json().catch(() => null);
+
+    if (data && data.message) {
+      alert(data.message);
+    } else {
+      alert("Сообщение отправлено!");
+    }
+
+    // Очистим форму после успешной отправки
+    name.value = "";
+    email.value = "";
+    comment.value = "";
+    agreement.value = false;
+
+  } catch (err) {
+    console.error(err);
+    alert("Ошибка при отправке. Попробуйте позже.");
   } finally {
     loading.value = false;
   }
@@ -114,7 +105,10 @@ async function sendForm() {
           <input class="form__email" type="email" v-model="email" placeholder="E-mail"/>
           <textarea class="form__comment" v-model="comment" rows="4" placeholder="Ваш вопрос"></textarea>
           <div class="form__confidentiality">
-            <input class="form__input form__input--checkbox _req" type="checkbox" id="formAgreement" checked>
+            <input class="form__input form__input--checkbox _req"
+                   type="checkbox"
+                   id="formAgreement"
+                   v-model="agreement">
             <label class=" form__label form__label--data" for="formAgreement">
                 <p class="form__text-data">Я&nbsp;согласен с
                   <router-link :to="{ name: 'PrivacyPolicy' }" class="footer__confidentiality">
@@ -268,7 +262,7 @@ async function sendForm() {
           left: 4px;
           background-color: #BFBFBF;
           transition: transform 0.2s ease-in-out;
-          transform: scale(1);
+          transform: scale(0);
 
           @include vp-767 {
             width: 9px;
@@ -298,7 +292,7 @@ async function sendForm() {
       }
 
       .form__input--checkbox:checked + .form__label--data:after {
-        transform: scale(0);
+        transform: scale(1);
       }
 
       .button {

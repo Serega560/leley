@@ -203,6 +203,8 @@ const filteredCreams = computed(() => {
         width: 100%;
         height: auto;
         border-radius: 10px;
+        min-height: 290px;
+        max-height: 290px;
 
         @include vp-767 {
           margin-bottom: 10px;

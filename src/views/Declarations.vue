@@ -1,16 +1,18 @@
 <script setup>
-import {ref} from 'vue'
 import docAntyVozrast from '@/assets/img/diclaration/antiVozrast.jpg'
 import docCeramidy from '@/assets/img/diclaration/ceramidy.jpg'
 import docLifting from '@/assets/img/diclaration/lifting.jpg'
 import docMatTonic from '@/assets/img/diclaration/matTonic.jpg'
 import docPeptidyMio from '@/assets/img/diclaration/peptidyMio.jpg'
 import docRetinol from '@/assets/img/diclaration/retinol.jpg'
+import docRetinol03 from '@/assets/img/diclaration/retinol_0,3.jpg'
 import docTraneksamovaya from '@/assets/img/diclaration/traneksamovaya.jpg'
 import docUvlTonic from '@/assets/img/diclaration/uvlTonic.jpg'
 import docPeptidy from '@/assets/img/diclaration/peptidy.jpg'
 import docVitamin from '@/assets/img/diclaration/vitamin.jpg'
+import docOval from '@/assets/img/diclaration/oval.jpg'
 
+import {ref} from 'vue'
 const currentDoc = ref(null)
 
 const openDoc = (doc) => {
@@ -49,73 +51,95 @@ watch(currentDoc, (val) => {
 
       <div class="declarations__grid">
         <article class="declarations__item">
-          <h2 class="declarations__item-title">Декларация соответствия на Ламеллярный крем для кожи вокруг глаз с лифтинг эффектом от всех типов морщин, от отеков</h2>
+          <h2 class="declarations__item-title">Декларация соответствия на Ламеллярный крем для кожи вокруг глаз с
+            лифтинг эффектом от всех типов морщин, от отеков</h2>
           <p class="declarations__item-desc">RU.0001.511172</p>
           <p class="declarations__item-desc">Действительно до: 30.01.2030</p>
           <button class="declarations__button button" @click="openDoc(docAntyVozrast)">Открыть</button>
         </article>
 
         <article class="declarations__item">
-          <h2 class="declarations__item-title">Декларация соответствия на Ламеллярный крем-флюид для лица с церамидами и пребиотиком для всех типов кожи</h2>
+          <h2 class="declarations__item-title">Декларация соответствия на Ламеллярный крем-флюид для лица с церамидами и
+            пребиотиком для всех типов кожи</h2>
           <p class="declarations__item-desc">RU.0001.511172</p>
           <p class="declarations__item-desc">Действительно до: 14.09.2029</p>
           <button class="declarations__button button" @click="openDoc(docCeramidy)">Открыть</button>
         </article>
 
         <article class="declarations__item">
-          <h2 class="declarations__item-title">Декларация соответствия на Ламеллярный крем для кожи вокруг глаз с лифтинг эффектом от всех типов морщин, от отеков</h2>
+          <h2 class="declarations__item-title">Декларация соответствия на Ламеллярный крем для кожи вокруг глаз с
+            лифтинг эффектом от всех типов морщин, от отеков</h2>
           <p class="declarations__item-desc">RU.0001.21ПН87</p>
           <p class="declarations__item-desc">Действительно до: 10.05.2030</p>
           <button class="declarations__button button" @click="openDoc(docLifting)">Открыть</button>
         </article>
 
         <article class="declarations__item">
-          <h2 class="declarations__item-title">Декларация соответствия на Матирующий, увлажняющий тоник с 5% ниацинамида, 0,5% цинка и пребиотиками для снижения жирности кожи</h2>
+          <h2 class="declarations__item-title">Декларация соответствия на Матирующий, увлажняющий тоник с 5%
+            ниацинамида, 0,5% цинка и пребиотиками для снижения жирности кожи</h2>
           <p class="declarations__item-desc">RU.0001.511172</p>
           <p class="declarations__item-desc">Действительно до: 14.09.2029</p>
           <button class="declarations__button button" @click="openDoc(docMatTonic)">Открыть</button>
         </article>
 
         <article class="declarations__item">
-          <h2 class="declarations__item-title">Декларация соответствия на Ламеллярный крем-флюид для лица и век с пептидами-миорелаксантами от мимических морщин, отеков, увлажняющий</h2>
+          <h2 class="declarations__item-title">Декларация соответствия на Ламеллярный крем-флюид для лица и век с
+            пептидами-миорелаксантами от мимических морщин, отеков, увлажняющий</h2>
           <p class="declarations__item-desc">RU.0001.511172</p>
           <p class="declarations__item-desc">Действительно до: 14.09.2029</p>
           <button class="declarations__button button" @click="openDoc(docPeptidyMio)">Открыть</button>
         </article>
 
         <article class="declarations__item">
-          <h2 class="declarations__item-title">Декларация соответствия на Сыворотку выравнивающую тон с транексамовой кислотой и экстрактом центеллы азиатской</h2>
+          <h2 class="declarations__item-title">Декларация соответствия на Сыворотку выравнивающую тон с транексамовой
+            кислотой и экстрактом центеллы азиатской</h2>
           <p class="declarations__item-desc">RU.0001.21ПН87</p>
           <p class="declarations__item-desc">Действительно до: 11.09.2030</p>
           <button class="declarations__button button" @click="openDoc(docTraneksamovaya)">Открыть</button>
         </article>
 
         <article class="declarations__item">
-          <h2 class="declarations__item-title">Декларация соответствия на Лифтинг-сыворотку от морщин с ретинолом 0,15% и экстрактом центеллы азиатской</h2>
+          <h2 class="declarations__item-title">Декларация соответствия на Лифтинг-сыворотку от морщин с ретинолом 0,15%
+            и экстрактом центеллы азиатской</h2>
           <p class="declarations__item-desc">RU.0001.511172</p>
           <p class="declarations__item-desc">Действительно до: 14.09.2029</p>
           <button class="declarations__button button" @click="openDoc(docRetinol)">Открыть</button>
         </article>
 
         <article class="declarations__item">
-          <h2 class="declarations__item-title">Декларация соответствия на Омолаживающий крем-флюид для лица и век с пептидами и троксерутином против морщин</h2>
+          <h2 class="declarations__item-title">Декларация соответствия на Омолаживающий крем-флюид для лица и век с
+            пептидами и троксерутином против морщин</h2>
           <p class="declarations__item-desc">RU.0001.511172</p>
           <p class="declarations__item-desc">Действительно до: 14.09.2029</p>
           <button class="declarations__button button" @click="openDoc(docPeptidy)">Открыть</button>
         </article>
 
         <article class="declarations__item">
-          <h2 class="declarations__item-title">Декларация соответствия на Сыворотку с витамином С 2% и ниацинамидом 5% от морщин, пигментации, для сияния кожи</h2>
+          <h2 class="declarations__item-title">Декларация соответствия на Сыворотку с витамином С 2% и ниацинамидом 5%
+            от морщин, пигментации, для сияния кожи</h2>
           <p class="declarations__item-desc">RU.0001.511172</p>
           <p class="declarations__item-desc">Действительно до: 14.09.2029</p>
           <button class="declarations__button button" @click="openDoc(docVitamin)">Открыть</button>
         </article>
 
         <article class="declarations__item">
-          <h2 class="declarations__item-title">Декларация соответствия на Увлажняющий, омолаживающий тоник с пантенолом, эктоином и НУФ</h2>
+          <h2 class="declarations__item-title">Декларация соответствия на Увлажняющий, омолаживающий тоник с пантенолом,
+            эктоином и НУФ</h2>
           <p class="declarations__item-desc">RU.0001.511172</p>
           <p class="declarations__item-desc">Действительно до: 16.10.2029</p>
           <button class="declarations__button button" @click="openDoc(docUvlTonic)">Открыть</button>
+        </article>
+        <article class="declarations__item">
+          <h2 class="declarations__item-title">Декларация соответствия на Лифтинг-сыворотку от морщин с ретинолом 0,3% и экстрактом центеллы азиатской</h2>
+          <p class="declarations__item-desc"> ЕАЭС N RU Д-RU.РА12.В.19296/25</p>
+          <p class="declarations__item-desc">Действительно до: 29.12.2030</p>
+          <button class="declarations__button button" @click="openDoc(docRetinol03)">Открыть</button>
+        </article>
+        <article class="declarations__item">
+          <h2 class="declarations__item-title">Декларация соответствия на Крем-лифтинг для четкости контура лица, для профилактики птоза и купероза</h2>
+          <p class="declarations__item-desc">ЕАЭС N RU Д-RU.РА12.В.19317/25</p>
+          <p class="declarations__item-desc">Действительно до: 29.12.2030</p>
+          <button class="declarations__button button" @click="openDoc(docOval)">Открыть</button>
         </article>
       </div>
 
@@ -208,6 +232,28 @@ watch(currentDoc, (val) => {
     display: inline-block;
     font-size: 15px;
     margin-top: 15px;
+    cursor: pointer;
+    background-color: var(--color-quartz);
+
+    &:hover {
+      background-color: var(--color-bright-grey);
+      color: var(--color-default-white);
+
+      @include vp-767 {
+        background-color: var(--color-quartz);
+        color: var(--color-default-black);
+      }
+    }
+
+    &:active {
+      background-color: var(--color-default-black);
+      color: var(--color-default-white);
+
+      @include vp-767 {
+        background-color: var(--color-quartz);
+        color: var(--color-default-black);
+      }
+    }
 
     @include vp-767 {
       padding: 6px 33px;

@@ -49,6 +49,7 @@ const isHomePage = computed(() => route.path === '/')
 
     .header__logo {
       padding: 21px;
+      color: var(--color-default-white);
 
       svg {
         width: 110px;
@@ -62,6 +63,7 @@ const isHomePage = computed(() => route.path === '/')
 
       @include vp-767 {
         padding: 29px 0 15px;
+        color: var(--color-default-black);
       }
     }
 

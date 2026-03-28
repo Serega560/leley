@@ -1,8 +1,40 @@
 <script setup>
-import Logo from './Logo.vue'
+import LogoNew from '@/assets/icons/logo_new.svg'
 import Menu from './Menu.vue'
 import Contacts from "@/components/Contacts.vue";
 import Telegram from '@/assets/icons/telegram.svg'
+import docTov from "@/assets/img/docTov.jpg";
+
+import {ref} from 'vue'
+const currentDoc = ref(null)
+
+const openDoc = (doc) => {
+  currentDoc.value = doc
+}
+
+const closeDoc = () => {
+  currentDoc.value = null
+}
+
+import {watch} from 'vue'
+
+watch(currentDoc, (val) => {
+  if (val) {
+    document.body.classList.add('body-no-scroll') // блокируем скролл
+  } else {
+    document.body.classList.remove('body-no-scroll') // разблокируем
+  }
+})
+
+watch(currentDoc, (val) => {
+  if (val) {
+    document.body.style.overflow = 'hidden'  // блокируем скролл
+  } else {
+    document.body.style.overflow = ''  // возвращаем скролл
+  }
+})
+
+
 </script>
 
 <template>
@@ -10,11 +42,17 @@ import Telegram from '@/assets/icons/telegram.svg'
     <div class="container">
       <div class="footer__block">
 
-        <Logo :inFooter="true" />
+        <LogoNew class="logo__new"/>
 
-        <div>
+        <div class="footer__main">
           <Menu :inFooter="true"/>
           <router-link :to="{ name: 'Declarations' }" class="declaration">Декларации</router-link>
+          <button class="footer__button" @click="openDoc(docTov)">Товарный знак</button>
+        </div>
+
+        <div v-if="currentDoc" class="modal" @click.self="closeDoc">
+          <button class="modal__close" @click="closeDoc">Закрыть</button>
+          <img :src="currentDoc" alt="Декларация" class="modal__image"/>
         </div>
 
         <div class="footer__details">
@@ -23,7 +61,7 @@ import Telegram from '@/assets/icons/telegram.svg'
           <p>ОГРНИП 98582476586548</p>
           <p>ИНН 3872178873287421387</p>
           <h2 class="footer__address">Адрес производства</h2>
-          <p>188640, Россия  Ленинградская обл, Всеволожский р-н, г. Всеволожск, пр. Всеволожский, д. 122, пом. № 73</p>
+          <p>188640, Россия Ленинградская обл, Всеволожский р-н, г. Всеволожск, пр. Всеволожский, д. 122, пом. № 73</p>
         </div>
         <div class="footer__accounts">
           <h2>Наши контакты связи</h2>
@@ -44,11 +82,10 @@ import Telegram from '@/assets/icons/telegram.svg'
             <Telegram class="footer__telegram"/>
           </a>
         </div>
-        <p class="footer__rights">все права защищены</p>
+        <p class="footer__rights">© 2025. Все права защищены</p>
       </div>
     </div>
   </div>
-
 </template>
 
 <style scoped lang="scss">
@@ -78,6 +115,49 @@ import Telegram from '@/assets/icons/telegram.svg'
       margin-bottom: 31px;
     }
 
+    .logo__new {
+      width: 50%;
+      height: 58%;
+
+      @include vp-767 {
+        width: 100%;
+        height: 45%;
+      }
+    }
+
+    .footer__main {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      @include vp-767 {
+        gap: 0;
+      }
+
+      a {
+        padding: 5px 7px;
+
+        @include vp-767 {
+          padding: 0 0 10px;
+        }
+      }
+
+      .footer__button {
+        font-size: 16px;
+        cursor: pointer;
+        padding: 5px 7px;
+        border: none;
+        background-color: var(--color-default-white);
+        text-align: start;
+
+
+        @include vp-767 {
+          padding: 0 0 10px;
+          font-size: 14px;
+        }
+      }
+    }
+
     h2 {
       font-size: 18px;
       margin-bottom: 5px;
@@ -97,6 +177,7 @@ import Telegram from '@/assets/icons/telegram.svg'
 
       @include vp-767 {
         padding: 0;
+        font-size: 14px;
       }
     }
 
@@ -216,6 +297,58 @@ import Telegram from '@/assets/icons/telegram.svg'
         margin-bottom: 31px;
       }
     }
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden;
+    background-color: rgba(153, 153, 153, 0.7);
+  }
+
+  .modal__close {
+    position: absolute;
+    top: 70px;
+    right: 471px;
+    font-size: 16px;
+    padding: 8px 18px;
+    cursor: pointer;
+    background: var(--color-default-black);
+    color: var(--color-default-white);
+    border: none;
+    z-index: 1010;
+
+    @include vp-767 {
+      right: 30px;
+      font-size: 12px;
+      padding: 6px 14px;
+      top: 65px;
+    }
+  }
+
+  .modal__image {
+    width: auto;
+    height: 80%;
+    max-width: 95%;
+
+    @include vp-767 {
+      top: 10px;
+      right: 10px;
+      font-size: 14px;
+      padding: 6px 12px;
+      height: auto;
+    }
+  }
+
+  .body-no-scroll {
+    overflow: hidden;
   }
 }
 

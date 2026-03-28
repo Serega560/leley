@@ -16,26 +16,34 @@ const cream = computed(() => creams.find(c => c.id === creamId.value) || {})
       <li class="product__item product__item--mb">
         <p class="product__name">{{ cream.info.action }}</p>
         <p class="product__text">{{cream.info.actionDescription}}</p>
-        <p class="product__text"></p>
+        <p class="product__text">{{cream.info.actionDescription_1}}</p>
+        <p class="product__text">{{cream.info.actionDescription_2}}</p>
+        <p class="product__text">{{cream.info.actionDescription_3}}</p>
+        <p class="product__text">{{cream.info.actionDescription_4}}</p>
+        <p class="product__text">{{cream.info.actionDescription_5}}</p>
       </li>
       <li class="product__item product__item--mb">
         <p class="product__name">{{cream.info.choice}}</p>
         <p class="product__text">{{cream.info.choiceAdvantages}}</p>
-      </li>
-      <li class="product__item">
-        <p class="product__name">{{cream.info.advantages}}</p>
-        <p class="product__text">{{cream.info.advantagesDescription}}</p>
+        <p class="product__text">{{cream.info.choiceAdvantages_1}}</p>
+        <p class="product__text">{{cream.info.choiceAdvantages_2}}</p>
+        <p class="product__text">{{cream.info.choiceAdvantages_3}}</p>
       </li>
       <li class="product__item product__item--mb">
         <p class="product__name">{{cream.info.result}}</p>
         <p class="product__text">{{cream.info.resultDescription}}</p>
       </li>
-      <li class="product__item product__item--ds">
+      <li class="product__item product__item--mb">
         <p class="product__name">{{cream.info.application}}</p>
         <p class="product__text">{{cream.info.applicationDescription}}</p>
+        <p class="product__text">{{cream.info.applicationDescription_1}}</p>
+        <p class="product__text">{{cream.info.applicationDescription_2}}</p>
+        <p class="product__text">{{cream.info.applicationDescription_3}}</p>
+        <p class="product__text">{{cream.info.applicationDescription_4}}</p>
+        <p class="product__text">{{cream.info.applicationDescription_5}}</p>
       </li>
     </ul>
-    <a class="product__declaration" href="#">{{cream.info.declaration}}</a>
+    <router-link :to="{ name: 'Declarations' }" class="declaration">декларация</router-link>
   </div>
 </template>
 
@@ -73,13 +81,6 @@ const cream = computed(() => creams.find(c => c.id === creamId.value) || {})
       margin-bottom: 10px;
     }
 
-    .product__item--mb {
-
-      @include vp-767 {
-        display: none;
-      }
-    }
-
     .product__name {
       font-size: 16px;
       font-weight: 700;
@@ -90,14 +91,6 @@ const cream = computed(() => creams.find(c => c.id === creamId.value) || {})
       @include vp-767 {
         font-size: 14px;
         margin-bottom: 10px;
-      }
-
-      p {
-        display: block;
-
-        @include vp-767 {
-          display: none;
-        }
       }
     }
 
@@ -110,6 +103,10 @@ const cream = computed(() => creams.find(c => c.id === creamId.value) || {})
         font-size: 14px;
         line-height: 100%;
       }
+    }
+
+    .product__text:not(:last-child) {
+      margin-bottom: 7px;
     }
   }
 
