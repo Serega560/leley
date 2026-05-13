@@ -16,20 +16,20 @@ try {
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
     $mail->Username   = 'asaulsergey@gmail.com'; // твой Gmail
-    $mail->Password   = 'gsev jpsb hvsi hddl'; // пароль приложения Gmail
-    $mail->SMTPSecure = 'ssl';
-    $mail->Port       = 465;
+    $mail->Password   = 'fzwk zthf cgex mooy'; // пароль приложения Gmail
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port = 587;
 
     $mail->CharSet = 'UTF-8';
     $mail->setLanguage('ru', 'phpmailer/language/');
     $mail->isHTML(true);
 
     // От кого и кому
-    $mail->setFrom('asaulsergey@gmail.com', 'Leley');
+    $mail->setFrom('asaulsergey@gmail.com', 'HOLL&LELEY');
     $mail->addAddress('asaulsergey@gmail.com');
 
     // Тема и тело
-    $mail->Subject = 'Новое сообщение с сайта Leley';
+    $mail->Subject = 'Новое сообщение с сайта HOLL&LELEY';
     $body = "<h1>Новое сообщение</h1>";
 
     if (!empty($_POST['name'])) {
@@ -55,6 +55,12 @@ try {
     }
 
     $mail->Body = $body;
+    
+    $mail->SMTPDebug = 2; // уровень отладки
+    $mail->Debugoutput = function($str, $level) {
+    file_put_contents(__DIR__ . '/mail_log.txt', $str . PHP_EOL, FILE_APPEND);
+    };
+
 
     // Отправка
     if ($mail->send()) {

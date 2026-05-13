@@ -1,42 +1,48 @@
 <script setup>
-import Telegram from '@/assets/icons/telegram.svg'
-import Mail from '@/assets/icons/mail.svg'
+import Telegram from "@/assets/icons/telegram.svg";
+import Mail from "@/assets/icons/mail.svg";
 
 defineProps({
   inFooter: {
     type: Boolean,
-    default: false
+    default: false,
   },
   isHomePage: {
     type: Boolean,
-    default: true
-  }
-})
+    default: true,
+  },
+});
 </script>
 
 <template>
-  <div class="contacts" :class="{
-    'contacts--footer': inFooter,
-    'contacts--white': isHomePage && !inFooter,
-    'contacts--black': !isHomePage && !inFooter
-  }">
+  <div
+    class="contacts"
+    :class="{
+      'contacts--footer': inFooter,
+      'contacts--white': isHomePage && !inFooter,
+      'contacts--black': !isHomePage && !inFooter,
+    }"
+  >
     <a target="_blank" href="https://t.me/Ekaterrinnna">
-      <Telegram class="contacts__telegram"/>
+      <Telegram class="contacts__telegram" />
     </a>
-    <a :href="`https://mail.google.com/mail/?view=cm&fs=1&to=info@leley.ru`" target="_blank">
-      <Mail class="contacts__mail"/>
+    <a
+      :href="`https://mail.google.com/mail/?view=cm&fs=1&to=info@holleley.ru`"
+      target="_blank"
+    >
+      <Mail class="contacts__mail" />
     </a>
 
     <h2>Наш телеграм-канал</h2>
     <a target="_blank" href="https://t.me/+Lg7reEr4YW0xY2Uy">
-      <Telegram class="contacts__telegram contacts__telegram--footer"/>
+      <Telegram class="contacts__telegram contacts__telegram--footer" />
     </a>
   </div>
 </template>
 
 <style lang="scss">
-@use '@/assets/styles/media.scss' as *;
-@use '@/assets/styles/container.scss' as *;
+@use "@/assets/styles/media.scss" as *;
+@use "@/assets/styles/container.scss" as *;
 
 .contacts {
   display: flex;

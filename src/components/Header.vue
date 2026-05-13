@@ -1,33 +1,31 @@
 <script setup>
-import Logo from '@/components/Logo.vue'
+import Logo from "@/components/Logo.vue";
 import Contacts from "@/components/Contacts.vue";
-import Menu from '@/components/Menu.vue'
-import {useRoute} from 'vue-router'
-import {computed} from 'vue'
+import Menu from "@/components/Menu.vue";
+import { useRoute } from "vue-router";
+import { computed } from "vue";
 
-const route = useRoute()
+const route = useRoute();
 
 // Определяем, находимся ли на главной странице
-const isHomePage = computed(() => route.path === '/')
+const isHomePage = computed(() => route.path === "/");
 </script>
 
 <template>
   <div class="header">
     <div class="container">
       <div class="header__block">
-
-        <Logo class="header__logo" :is-home-page="isHomePage"/>
-        <Menu class="header__menu"/>
-        <Contacts class="header__contacts" :is-home-page="isHomePage"/>
-
+        <Logo class="header__logo" :is-home-page="isHomePage" />
+        <Menu class="header__menu" />
+        <Contacts class="header__contacts" :is-home-page="isHomePage" />
       </div>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
-@use '@/assets/styles/media.scss' as *;
-@use '@/assets/styles/container.scss' as *;
+@use "@/assets/styles/media.scss" as *;
+@use "@/assets/styles/container.scss" as *;
 
 .header {
   width: 100%;
@@ -48,7 +46,6 @@ const isHomePage = computed(() => route.path === '/')
     }
 
     .header__logo {
-      padding: 21px;
       color: var(--color-default-white);
 
       svg {

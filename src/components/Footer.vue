@@ -1,58 +1,59 @@
 <script setup>
-import LogoNew from '@/assets/icons/logo_new.svg'
-import Menu from './Menu.vue'
+import Logo from "@/assets/icons/logo.svg";
+import Menu from "./Menu.vue";
 import Contacts from "@/components/Contacts.vue";
-import Telegram from '@/assets/icons/telegram.svg'
+import Telegram from "@/assets/icons/telegram.svg";
 import docTov from "@/assets/img/docTov.jpg";
 
-import {ref} from 'vue'
-const currentDoc = ref(null)
+import { ref } from "vue";
+const currentDoc = ref(null);
 
 const openDoc = (doc) => {
-  currentDoc.value = doc
-}
+  currentDoc.value = doc;
+};
 
 const closeDoc = () => {
-  currentDoc.value = null
-}
+  currentDoc.value = null;
+};
 
-import {watch} from 'vue'
-
-watch(currentDoc, (val) => {
-  if (val) {
-    document.body.classList.add('body-no-scroll') // блокируем скролл
-  } else {
-    document.body.classList.remove('body-no-scroll') // разблокируем
-  }
-})
+import { watch } from "vue";
 
 watch(currentDoc, (val) => {
   if (val) {
-    document.body.style.overflow = 'hidden'  // блокируем скролл
+    document.body.classList.add("body-no-scroll"); // блокируем скролл
   } else {
-    document.body.style.overflow = ''  // возвращаем скролл
+    document.body.classList.remove("body-no-scroll"); // разблокируем
   }
-})
+});
 
-
+watch(currentDoc, (val) => {
+  if (val) {
+    document.body.style.overflow = "hidden"; // блокируем скролл
+  } else {
+    document.body.style.overflow = ""; // возвращаем скролл
+  }
+});
 </script>
 
 <template>
   <div class="footer">
     <div class="container">
       <div class="footer__block">
-
-        <LogoNew class="logo__new"/>
+        <Logo class="logo" />
 
         <div class="footer__main">
-          <Menu :inFooter="true"/>
-          <router-link :to="{ name: 'Declarations' }" class="declaration">Декларации</router-link>
-          <button class="footer__button" @click="openDoc(docTov)">Товарный знак</button>
+          <Menu :inFooter="true" />
+          <router-link :to="{ name: 'Declarations' }" class="declaration"
+            >Декларации</router-link
+          >
+          <button class="footer__button" @click="openDoc(docTov)">
+            Товарный знак
+          </button>
         </div>
 
         <div v-if="currentDoc" class="modal" @click.self="closeDoc">
           <button class="modal__close" @click="closeDoc">Закрыть</button>
-          <img :src="currentDoc" alt="Декларация" class="modal__image"/>
+          <img :src="currentDoc" alt="Декларация" class="modal__image" />
         </div>
 
         <div class="footer__details">
@@ -61,12 +62,18 @@ watch(currentDoc, (val) => {
           <p>ОГРНИП 98582476586548</p>
           <p>ИНН 3872178873287421387</p>
           <h2 class="footer__address">Адрес производства</h2>
-          <p>188640, Россия Ленинградская обл, Всеволожский р-н, г. Всеволожск, пр. Всеволожский, д. 122, пом. № 73</p>
+          <p>
+            188640, Россия Ленинградская обл, Всеволожский р-н, г. Всеволожск,
+            пр. Всеволожский, д. 122, пом. № 73
+          </p>
         </div>
         <div class="footer__accounts">
           <h2>Наши контакты связи</h2>
-          <Contacts :inFooter="true"/>
-          <router-link :to="{ name: 'PrivacyPolicy' }" class="footer__confidentiality">
+          <Contacts :inFooter="true" />
+          <router-link
+            :to="{ name: 'PrivacyPolicy' }"
+            class="footer__confidentiality"
+          >
             Политика конфиденциальности
           </router-link>
         </div>
@@ -74,12 +81,12 @@ watch(currentDoc, (val) => {
       <div class="footer__copyright">
         <div>
           <a target="_blank" href="https://t.me/alinagned">
-            <p class="footer__designer">Задизайнила Алина Гнедова </p>
-            <Telegram class="footer__telegram"/>
+            <p class="footer__designer">Задизайнила Алина Гнедова</p>
+            <Telegram class="footer__telegram" />
           </a>
           <a target="_blank" href="https://t.me/Serega580">
             <p class="footer__designer">Разработал А. Сергей</p>
-            <Telegram class="footer__telegram"/>
+            <Telegram class="footer__telegram" />
           </a>
         </div>
         <p class="footer__rights">© 2025. Все права защищены</p>
@@ -89,9 +96,8 @@ watch(currentDoc, (val) => {
 </template>
 
 <style scoped lang="scss">
-
-@use '@/assets/styles/media.scss' as *;
-@use '@/assets/styles/container.scss' as *;
+@use "@/assets/styles/media.scss" as *;
+@use "@/assets/styles/container.scss" as *;
 
 .footer {
   padding: 70px 0;
@@ -115,13 +121,13 @@ watch(currentDoc, (val) => {
       margin-bottom: 31px;
     }
 
-    .logo__new {
-      width: 50%;
-      height: 58%;
+    .logo {
+      width: 135px;
+      height: 27px;
 
       @include vp-767 {
-        width: 100%;
-        height: 45%;
+        width: 115%;
+        height: 15%;
       }
     }
 
@@ -149,7 +155,6 @@ watch(currentDoc, (val) => {
         border: none;
         background-color: var(--color-default-white);
         text-align: start;
-
 
         @include vp-767 {
           padding: 0 0 10px;
@@ -242,9 +247,8 @@ watch(currentDoc, (val) => {
       align-items: center;
       gap: 0 5px;
 
-
       p {
-        transition: color .4s;
+        transition: color 0.4s;
       }
 
       svg {
@@ -253,7 +257,6 @@ watch(currentDoc, (val) => {
       }
 
       &:hover {
-
         p {
           color: var(--color-dodger-blue);
 
@@ -351,5 +354,4 @@ watch(currentDoc, (val) => {
     overflow: hidden;
   }
 }
-
 </style>

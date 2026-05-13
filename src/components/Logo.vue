@@ -1,12 +1,12 @@
 <script setup>
-import Logo from '@/assets/icons/logo.svg'
+import Logo from "@/assets/icons/logo.svg";
 
 defineProps({
   inFooter: {
     type: Boolean,
-    default: false
-  }
-})
+    default: false,
+  },
+});
 </script>
 
 <template>
@@ -16,8 +16,8 @@ defineProps({
 </template>
 
 <style scoped lang="scss">
-@use '@/assets/styles/media.scss' as *;
-@use '@/assets/styles/container.scss' as *;
+@use "@/assets/styles/media.scss" as *;
+@use "@/assets/styles/container.scss" as *;
 
 .img {
   font-size: 0;
@@ -31,21 +31,17 @@ defineProps({
   }
 
   .logo {
-    @include vp-767 {
-      width: 131px;
-      height: 21px;
-    }
+    width: 135px;
+    height: 27px;
   }
 
   .logo--footer {
-    width: 252px;
-    height: 41px;
+    width: 135px;
+    height: 27px;
 
     @include vp-767 {
       width: 110px;
     }
   }
 }
-
 </style>
-
